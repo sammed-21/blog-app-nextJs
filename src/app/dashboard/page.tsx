@@ -13,7 +13,7 @@ const DashboardPage: React.FC = () => {
 
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data,mutate, error, isLoading } = useSWR(
-    `/api/posts?username=${session?.data?.user.name}`,
+    `/api/posts?username=${session?.data?.user?.name}`,
     fetcher
   );
   console.log(data);
@@ -57,7 +57,7 @@ const DashboardPage: React.FC = () => {
           desc,
           img,
           content,
-          username: session.data.user.name,
+          username: session?.data?.user?.name,
         }),
       });
       mutate()
@@ -72,7 +72,7 @@ const DashboardPage: React.FC = () => {
         <div className="flex-1 gap-3 mt-3  ">
           {isLoading
             ? "loading"
-            : data?.map((post) => {
+            : data?.map((post:any) => {
             return (
 
               <div
