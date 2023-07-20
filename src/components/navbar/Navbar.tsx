@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import React from 'react'
 import DarkModeToggle from '../DarkModToggle/DarkModeToggle'
+import { signOut, useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
  
 
 const links = [
@@ -38,9 +40,10 @@ const links = [
 ]
 
 const Navbar = () => {
-     
+    const session = useSession()
+    const router = useRouter()
   return (
-      <div className='     flex h-[10vh] items-center justify-between px-4'>
+      <div className='flex h-[10vh] items-center justify-between px-4'>
           <Link href="/">
               IamSAMMED
          </Link>
@@ -49,9 +52,10 @@ const Navbar = () => {
             {links.map((link)=>(
                 <Link key={link.id} href={link.url}>{link.title}</Link>
             ))}
-              <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>{console.log('clicked')}}>
-                  Logout
+              {session.status === "authenticated" && 
+              <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={signOut}>Logout
               </button>
+              }
             </div>
          
     </div>

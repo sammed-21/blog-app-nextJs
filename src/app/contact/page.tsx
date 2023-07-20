@@ -24,7 +24,7 @@ const ContactPage = ( ) => {
                     <input type="text" placeholder="name" className="inputtag" />
                     <input type="email" placeholder="email" className="inputtag py-3" />
                     <textarea placeholder="message" className="inputtag" cols={30} rows={10} />
-                    <Button url="" text="send"/>
+                    <Button url="" text="send" classname={""}/>
                 </form>
             
             

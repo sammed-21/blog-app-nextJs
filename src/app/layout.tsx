@@ -4,7 +4,8 @@ import { Inter, Roboto, Poppins } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
-
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
+ 
 // import {ThemeProvider} from "../../context/ThemeContex"
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
+          <AuthProvider>
+
           <div className="container ">
             {/* <div className="max-sm:hidden"> */}
 
@@ -31,6 +34,7 @@ export default function RootLayout({
 
             <Footer />
           </div>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
