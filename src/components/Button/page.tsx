@@ -9,13 +9,13 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ text, url, classname }) => {
-  if (!url) {
+  if (!url) { 
     return <button className='button'>{text}</button>;
   }
 
   return (
     <Link href={url}>
-      <button className={`button ${classname}`}>{text}</button>
+      <button className={`button ${classname} hover:bg-sky-500`}>{text}</button>
     </Link>
   );
 }

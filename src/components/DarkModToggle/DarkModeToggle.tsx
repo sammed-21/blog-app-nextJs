@@ -6,7 +6,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 
 
 const DarkModeToggle = () => {
-  const { toggle ,mode }  = useContext(ThemeContext)
+  const { toggle  }  = useContext(ThemeContext)
     return (
         <label className="switch-container" onClick={toggle} >
         <input type="checkbox" />

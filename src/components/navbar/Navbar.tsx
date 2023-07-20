@@ -53,7 +53,7 @@ const Navbar = () => {
                 <Link key={link.id} href={link.url}>{link.title}</Link>
             ))}
               {session.status === "authenticated" && 
-              <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={signOut}>Logout
+              <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut}>Logout
               </button>
               }
             </div>

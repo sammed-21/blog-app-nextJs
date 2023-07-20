@@ -11,7 +11,7 @@ const DashboardPage: React.FC = () => {
   const session = useSession();
   const router = useRouter();
 
-  const fetcher = (url: string) => fetch(url).then((res) => res.json());
+  const fetcher = async (url: string) => await fetch(url).then((res) => res.json());
   const { data,mutate, error, isLoading } = useSWR(
     `/api/posts?username=${session?.data?.user?.name}`,
     fetcher

@@ -62,7 +62,7 @@ const AboutPage = () => {
             -Fast and Handy Mobile App
             <br />
           </p>
-          <Button text="contact" url="/contact" />
+          <Button text="contact" url="/contact" classname={""} />
         </div>
       </div>
     </div>
