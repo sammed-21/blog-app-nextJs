@@ -32,7 +32,7 @@ const Login = () => {
                      <button className="w-full py-4 bg-blue-500">Login</button>
                </form>
                
-               <button onClick={()=> signIn("google")}>Login with google</button>
+               <button className='button' onClick={()=> signIn("google")}>Login with google</button>
             </div>
    
   )
