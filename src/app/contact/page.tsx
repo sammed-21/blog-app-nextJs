@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import Button from "@/components/Button/page";
+import Button from "@/components/Button/Button";
 // import Hero from "../../public/crypto-devs.png";
 export const metadata: Metadata = {
     title: "Sammed Dev Contact Page",

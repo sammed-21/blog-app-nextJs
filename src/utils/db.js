@@ -1,6 +1,7 @@
 import mongoose from "mongoose"
-
-const connect = async () => {
+  
+export const connect = async () => {
+    mongoose.set('strictQuery', true);
     try {
         await mongoose.connect(process.env.MONGO_URL).then(()=>console.log("connected to mongodb"));
 
@@ -9,4 +10,3 @@ const connect = async () => {
         
     }
 }
-export default connect

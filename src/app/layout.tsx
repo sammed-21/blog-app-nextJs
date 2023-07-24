@@ -26,7 +26,7 @@ export default function RootLayout({
           <AuthProvider>
 
           <div className="container ">
-            {/* <div className="max-sm:hidden"> */}
+            {/* <div className="max-sm:hidden sticky z-10 top-4 mb-7"> */}
 
             <Navbar />
             {/* </div> */}

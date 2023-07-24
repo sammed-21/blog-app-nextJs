@@ -79,7 +79,7 @@ const DashboardPage: React.FC = () => {
               className="flex items-center justify-between   gap-4 my-9 "
               key={post._id}
               >
-                <div className="w-[200px] h-[100px] relative  bg-red-300">
+                <div className="w-[200px] h-[100px] relative">
                   <Image
                     className="object-cover w-full h-full"
                     src={post.img}

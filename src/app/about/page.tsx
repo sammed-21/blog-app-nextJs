@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Hero from "../../../public/pexels-photo-3184339.jpeg";
-import Button from "@/components/Button/page";
+import Button from "@/components/Button/Button"
 const AboutPage = () => {
   return (
     <div className="flex flex-col justify-around gap-4">
       <div className=" relative">
         <Image
-          className="w-[100%] h-[300px] object-cover"
+          className="w-[100%] h-[300px] object-cover grayscale opacity-75"
           src={Hero}
           alt={"this is the main img"}
           width={400}

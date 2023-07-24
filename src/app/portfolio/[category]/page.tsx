@@ -1,4 +1,4 @@
-import Button from "@/components/Button/page";
+import Button from "@/components/Button/Button";
 import Image from "next/image";
 import main from "../../../../public/illustration.png";
 import { items } from "./data.js";

@@ -4,6 +4,7 @@ import React from 'react'
 import DarkModeToggle from '../DarkModToggle/DarkModeToggle'
 import { signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import Menu from '../Menu/Menu'
  
 
 const links = [
@@ -43,22 +44,36 @@ const Navbar = () => {
     const session = useSession()
     const router = useRouter()
   return (
-      <div className='flex h-[10vh] items-center justify-between px-4'>
-          <Link href="/">
-              IamSAMMED
-         </Link>
-          <div className='flex items-center space-x-6'>
-              <DarkModeToggle/>
-            {links.map((link)=>(
-                <Link key={link.id} href={link.url}>{link.title}</Link>
-            ))}
-              {session.status === "authenticated" && 
-              <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut}>Logout
-              </button>
-              }
-            </div>
-         
-    </div>
+    //   <div className='flex h-[10vh] items-center justify-between px-4 sticky top-4 rounded-full z-10 backdrop-filter bg-black backdrop-blur-xl  bg-opacity-30  '>
+    //       <Link href="/">
+    //           IamSAMMED
+    //      </Link>
+    //       <div className='flex items-center space-x-6'>
+    //           <DarkModeToggle/>
+    //         {links.map((link)=>(
+        //             <Link key={link.id} href={link.url}>{link.title}</Link>
+        //         ))}
+        //           {session.status === "authenticated" &&
+        //           <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut}>Logout
+    //           </button>
+    //           }
+    //         </div>
+    
+      // </div>
+      <div className="w-full mr-8 h-[10vh] flex justify-between px-6 items-center backdrop-filter bg-black backdrop-blur-xl  bg-opacity-30 z-50">
+          {/* LOGO */}
+          <div className="text-xl">
+              
+           <Link href="/">
+               IamSAMMED
+          </Link>
+          </div>
+          {/* MOBILE MENU */}
+          <div>
+              <Menu/>
+</div>
+          
+      </div>
   )
 }
 

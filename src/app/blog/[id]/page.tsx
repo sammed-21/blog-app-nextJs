@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from 'next'
 async function getData(id: number) {
  
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/posts/${id}`, {
     cache: "no-store",
   });
 

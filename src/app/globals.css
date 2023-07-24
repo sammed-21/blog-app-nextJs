@@ -19,7 +19,7 @@
 body {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin:  0;
   color:aliceblue;
   background-color: black;
   /* color: rgb(var(--foreground-rgb));
@@ -33,7 +33,7 @@ body {
 }
 
 .container{
-  @apply min-w-full min-h-[100vh] m-0 p-0 flex flex-col justify-between  flex-wrap px-[10vh] max-sm:items-center
+  @apply min-w-full min-h-[100vh] m-0 p-0 flex flex-col justify-between flex-wrap px-[4vh] max-sm:items-center
 }
 
 .button{
@@ -112,7 +112,7 @@ body {
   color:black;
 }
 .dark {
-  background-color:black;
+  background-color:rgb(44, 43, 43);
   color:white;
 }
 

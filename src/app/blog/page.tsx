@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/posts");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/posts`);
 
   if (!res.ok) {
     throw new Error("failed to fetch data");
@@ -19,15 +19,15 @@ const BlogPage = async () => {
 
   return (
     <div className="w-full">
-      {data.map((item) => (
+      {data.map((item:any) => (
         <Link
           href={`/blog/${item._id}`}
           key={item.id}
-          className="flex justify-between items-center gap-4 my-5 sm:flexvsm:bg-red-300"
+          className="flex justify-between items-center gap-4 my-5 sm:flex  "
         >
           <div className="flex1">
             <Image
-              src="https://images.pexels.com/photos/16790135/pexels-photo-16790135/free-photo-of-fog-over-bare-trees-in-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={item.img || "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"}
               alt={""}
               width={400}
               height={258}

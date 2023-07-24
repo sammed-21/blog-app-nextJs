@@ -19,14 +19,17 @@
         "name": "next"
       }
     ],
-      "baseUrl": "src/",
-      "paths": {
-        "@/styles/*": ["styles/*"],
-        "@/components/*": ["components/*"],
-        "@/context/*":["context/*"],
-        "@/utils/*":["utils/*"],
-        "@/models/*":["models/*"]
-      }
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+      // "baseUrl": "src/",
+      // "paths": { 
+      //   "@/styles/*": ["styles/*"],
+      //   "@/components/*": ["components/*"],
+      //   "@/context/*":["context/*"],
+      //   "@/utils/*":["utils/*"],
+      //   "@/models/*":["models/*"]
+      // }
     
     
   },
