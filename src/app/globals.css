@@ -33,7 +33,7 @@ body {
 }
 
 .container{
-  @apply min-w-full min-h-[100vh] m-0 p-0 flex flex-col justify-between flex-wrap px-[4vh] max-sm:items-center
+  @apply min-w-full min-h-[100vh] m-0 p-0 flex flex-col justify-between flex-wrap px-[4vh] max-sm:items-center relative
 }
 
 .button{
