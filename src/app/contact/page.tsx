@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 import Button from "@/components/Button/Button";
 import { useState ,useContext, useEffect} from "react";
-import { ThemeContext } from "@/context/ThemeContext"
+// import { ThemeContext } from "@/context/ThemeContext"
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import Loading from "./loading";
@@ -19,7 +19,7 @@ import Loading from "./loading";
 // };
 
 const ContactPage = () => {
-  const { mode } = useContext(ThemeContext)
+  // const { mode } = useContext(ThemeContext)
   const [loading, setLoading] = useState(false);
   const [buttondisable, setButtonDisable] = useState(true);
   const [userForm, setUserForm] = useState({

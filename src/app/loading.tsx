@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loading = () => {
+const loading = () => {
   return (
     <div className="loader">
       <div className="justify-content-center jimu-primary-loading"></div>
@@ -8,4 +8,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default loading;
