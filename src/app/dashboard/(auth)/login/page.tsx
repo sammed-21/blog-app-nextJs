@@ -1,41 +1,42 @@
-"use client"
-import React from 'react'
-import { signIn, signOut, useSession } from "next-auth/react"
-import { useRouter } from 'next/navigation';
+"use client";
+import React from "react";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import Loading from "@/app/contact/loading";
 
 const Login = () => {
   const session = useSession();
-  const router = useRouter()
+  const router = useRouter();
 
   if (session.status === "loading") {
-    return <p>loading..</p>
+    return <p><Loading/></p>;
   }
   if (session.status === "authenticated") {
-    router?.push("/dashboard")
+    router?.push("/dashboard");
   }
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     const email = e.target[0].value;
     const password = e.target[1].value;
-    signIn("credentials",{email,password})
-
-  }
+    signIn("credentials", { email, password });
+  };
   return (
- 
- 
-                <div className=" items-center flex flex-col ">
-              
-              <form className=" rounded-sm flex flex-col flex-1 space-y-3 justify-between" onSubmit={handleSubmit}>
-                      <input type="email" placeholder="email" className="inputtag py-3" />
-                     <input placeholder="password" type="password" className="inputtag"/>
-                     <button className="w-full py-4 bg-blue-500">Login</button>
-               </form>
-               
-               <button className='button' onClick={()=> signIn("google")}>Login with google</button>
-            </div>
-   
-  )
-}
+    <div className=" items-center flex flex-col max-md:justify-center">
+      <form
+        className=" rounded-sm flex flex-col flex-1 space-y-3 justify-between"
+        onSubmit={handleSubmit}
+      >
+        <input type="email" placeholder="email" className="inputtag py-3" />
+        <input placeholder="password" type="password" className="inputtag" />
+        <button className="w-full py-4 bg-blue-500">Login</button>
+      </form>
 
-export default Login
+      <p className="" onClick={() => signIn("google")}>
+        Login with google
+      </p>
+    </div>
+  );
+};
+
+export default Login;

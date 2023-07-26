@@ -5,6 +5,7 @@ import useSWR from "swr";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Loading from "../loading";
 // import { useRouter } from 'next/router';
 
 const DashboardPage: React.FC = () => {
@@ -68,10 +69,10 @@ const DashboardPage: React.FC = () => {
   };
   if (session.status === "authenticated") {
     return (
-      <div className=" mt-3 flex gap-[100px]">
-        <div className="flex-1 gap-3 mt-3  ">
+      <div className="mt-3 flex gap-[100px] max-md:flex-col">
+        <div className="flex-1  mt-3  ">
           {isLoading
-            ? "loading"
+            ? <Loading/>
             : data?.map((post:any) => {
             return (
 
@@ -95,7 +96,7 @@ const DashboardPage: React.FC = () => {
             })}
         </div>
         <form
-          className="flex-1    flex  flex-col gap-2"
+          className="flex-1 flex  flex-col gap-2"
           onSubmit={handleSubmit}
         >
           <h1 className="texth1">Add New Post</h1>

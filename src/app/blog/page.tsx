@@ -23,7 +23,7 @@ const BlogPage = async () => {
         <Link
           href={`/blog/${item._id}`}
           key={item.id}
-          className="flex justify-between items-center gap-4 my-5 sm:flex  "
+          className="flex justify-between items-center gap-4 my-5 sm:flex max-md:flex-col-reverse   "
         >
           <div className="flex1">
             <Image

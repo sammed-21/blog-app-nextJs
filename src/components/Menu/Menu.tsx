@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ThemeContext } from "@/context/ThemeContext";
-
+ 
 const links = [
   {
     id: 1,
@@ -59,8 +59,8 @@ const Navbar = () => {
         />
       ) : (
         <Image
-          className="bg-clip-content invert bg-white text-white"
-          src="/close.png"
+          className="invert"
+          src="/cross.png"
           alt=""
           width={30}
           height={30}

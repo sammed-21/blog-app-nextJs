@@ -49,14 +49,14 @@ const Blog = async ({ params }: { params: { id: number } }) => {
           <p>sammed jain</p></div>
           
       </div>
-        <div className="flex-1">
-          <Image src={data.image} alt={""}
+        <div className="h-300 w-200 flex-1">
+          <Image src={data.img ||  "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"} alt={""}
             width={600} height={258} className="w-[600px] h-[300px] " />
         </div>
 
       </div>
       <div>
-        <p className="">
+        <p className="text-xl">
 
         {data.content} </p>
       </div>

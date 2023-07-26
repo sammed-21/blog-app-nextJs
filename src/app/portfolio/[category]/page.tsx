@@ -40,7 +40,7 @@ const Category = ({ params }: { params: { category: keyof typeof items } }) => {
       {data?.map((item) => (
        
        
-        <div className={`flex my-4 ${item.id & 1 ?"flex-row-reverse":""}  flex-wrap justify-between gap-3 items-center`} key={item.id}>
+        <div className="flex my-4 flex-warp-reverse justify-between gap-3 items-center max-md:hidden" key={item.id}>
         <div className="flex-1 flex flex-col gap-3">
           <h1 className="texth1">{item.title}</h1>
             <p className="text-md ">{item.desc}</p>
@@ -53,7 +53,25 @@ const Category = ({ params }: { params: { category: keyof typeof items } }) => {
       </div>
        
       
-       ))}
+      ))}
+      {/* mobile */}
+      {data?.map((item) => (
+  
+        <div key={item.id} className="flex justify-center items-center w-full max-sm:items-center max-sm:flex-col-reverse max-md:justify-center max-h-screen max-sm:my-4 md:hidden ">
+          <div className=" flex flex-col max-md:flex-1 "> 
+          <h1 className="texth1">{item.title}</h1>
+            <p className="text-sm ">{item.desc}</p>
+          <Button url="" text="See More" classname={""}/>
+        </div>
+
+          <div className="w-300 h-200 max-md:flex-1">
+      <Image src={item.image} alt="there is a image" width={300} height={200} />
+    </div>
+
+          </div>
+      
+     
+      ))}
        </div>
 )};
 

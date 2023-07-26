@@ -2,7 +2,11 @@ import React from 'react'
 
 const Loading = () => {
   return (
-    <div>loading</div>
+    
+      <div className="loader">
+  <div className="justify-content-center jimu-primary-loading"></div>
+</div>
+   
   )
 }
 

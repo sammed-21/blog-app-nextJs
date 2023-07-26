@@ -1,26 +1,25 @@
 import React from "react";
 import Image from "next/image";
 import Hero from "../../../public/pexels-photo-3184339.jpeg";
-import Button from "@/components/Button/Button"
+import Button from "@/components/Button/Button";
 const AboutPage = () => {
   return (
-    <div className="flex flex-col justify-around gap-4">
+    <div className="flex flex-col justify-around gap-4 mt-7">
       <div className=" relative">
         <Image
-          className="w-[100%] h-[300px] object-cover grayscale opacity-75"
+          className=" w-[100%] h-[300px] object-cover grayscale opacity-75"
           src={Hero}
           alt={"this is the main img"}
           width={400}
           height={500}
         />
-        <div className="absolute bottom-8 font-bold text-4xl left-5 bg-blue-500 text-white">
+        <div className="absolute bottom-8 font-bold text-4xl left-5 bg-blue-500 text-white max-sm:text-lg">
           <h1>Digital Storytellers</h1>
           <h2>Handcrafting award winning digital expriences</h2>
         </div>
       </div>
-
-      <div className="flex bg-black-400 gap-9 py-4">
-        <div className="flex-1 w-1/4  ">
+      <div className="flex bg-black-400 gap-9 py-4 max-md:flex-col max-md:w-full max-md:flex-0 ">
+        <div className="flex-1 ">
           <h1 className="texth1 ">Who are We?</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.

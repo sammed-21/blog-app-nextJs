@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import AuthProvider from "@/components/AuthProvider/AuthProvider";
+ 
 
 // import {ThemeProvider} from "../../context/ThemeContex"
 const inter = Inter({ subsets: ["latin"] });
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ThemeProvider>
           <AuthProvider>
             <div className="container flex flex-col ">
+              
                  <Navbar />
               
 

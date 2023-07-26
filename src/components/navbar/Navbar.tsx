@@ -43,7 +43,7 @@ const Navbar = () => {
     const session = useSession();
     const router = useRouter();
     return (
-          <div className='flex h-[10vh] items-center justify-between px-4 sticky top-4 rounded-full z-10 backdrop-filter bg-black backdrop-blur-xl  bg-opacity-30 max-sm:w-full '>
+          <div className='flex h-[10vh] items-center justify-between px-4 sticky top-4 rounded-lg z-10 backdrop-filter bg-blue-900 backdrop-blur-xl  bg-opacity-50 max-sm:w-full '>
           <Link href="/">
               IamSAMMED
          </Link>
@@ -54,10 +54,10 @@ const Navbar = () => {
               {links.map((link)=>(
                   <Link key={link.id} href={link.url}>{link.title}</Link>
                   ))}
-                  {/* {session.status === "authenticated" &&
-                  <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut}>Logout
+                  {session.status === "authenticated" &&
+                  <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut()}>Logout
                   </button>
-                } */}
+                }
                   
          </div>
           {/* MOBILE MENU */}
@@ -67,33 +67,7 @@ const Navbar = () => {
                 </div>
 
     </div>   
-    // <div className="sticky  z-100 w-full mr-8 h-[10vh] flex justify-between top-[2vh] rounded-lg px-6 items-center backdrop-filter bg-black backdrop-blur-xl  bg-opacity-30  ">
-    //<div className="relative w-full mr-8 h-[10vh] flex justify-between px-6 items-center backdrop-filter bg-black backdrop-blur-xl  bg-opacity-30 z-50 "> */}
-     
-          // LOGO */}
-    //   <div className="text-xl">
-    //           <Link href="/">IamSAMMED</Link>
-            
-    //       </div>
-    //       <div className="flex gap-2 items-center">
-              
-    //       <DarkModeToggle/>
-    //       <div className="hidden md:flex gap-4 items-center">
-    //       {links.map((link)=>(
-    //           <Link key={link.id} href={link.url}>{link.title}</Link>
-    //           ))}
-    //           {/* {session.status === "authenticated" &&
-    //           <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut}>Logout
-    //           </button>
-    //         } */}
-              
-    //  </div>
-    //   {/* MOBILE MENU */}
-    //   <div className="z-100 md:hidden  ">
-    //     <Menu />
-    //   </div>
-            // </div>
-    // </div>
+ 
   );
 };
 
