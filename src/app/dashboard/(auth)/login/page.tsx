@@ -2,7 +2,7 @@
 import React from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import Loading from "@/app/loading";
+import Loading from "../../../loading";
 
 const Login = () => {
   const session = useSession();

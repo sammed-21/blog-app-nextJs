@@ -1,25 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import type { Metadata } from "next";
-// import Hero from "@/public/crypto-devs.png";
-// import Hero from "/crypto-devs.png"
-
-import Button from "@/components/Button/Button";
+ 
+  
 import { useState ,useContext, useEffect} from "react";
-// import { ThemeContext } from "@/context/ThemeContext"
+ 
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import Loading from "./loading";
-
-// import Hero from "../../public/crypto-devs.png"; 
-// export const metadata: Metadata = {
-//   title: "Sammed Dev Contact Page",
-//   description: "This is my contact page",
-// };
-
+ 
 const ContactPage = () => {
-  // const { mode } = useContext(ThemeContext)
+ 
   const [loading, setLoading] = useState(false);
   const [buttondisable, setButtonDisable] = useState(true);
   const [userForm, setUserForm] = useState({
@@ -64,8 +55,7 @@ const ContactPage = () => {
           {loading ? <Loading /> :
             <Image
               src="/crypto-devs.png"
-              // src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?w=740&t=st=1689590534~exp=1689591134~hmac=b90daaa339338a5c58f6e42fd83659cac7544000855da6861f5c8da1d54bdc22"
-              className="animate-bounce-slow object-contain "
+               className="animate-bounce-slow object-contain "
               width={300}
               height={300}
               alt="this is the image"

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Hero from "../../../public/pexels-photo-3184339.jpeg";
-import Button from "@/components/Button/Button";
+import Button from "../../components/button/Button";
 const AboutPage = () => {
   return (
     <div className="flex flex-col justify-around gap-4 mt-7">

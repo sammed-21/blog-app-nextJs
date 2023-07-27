@@ -1,7 +1,7 @@
-import {connect} from "@/utils/db";
+import {connect} from "../../../../utils/db.ts";
 import { NextResponse } from "next/server";
-import User from "@/models/user";
-// import User from "@/models/User";
+// import User from "@/models/user.js";
+import User from "@/models/user.ts";
 import bcrypt from "bcryptjs"
 export const POST = async (request) => {
     const { name, email, password } = await request.json();

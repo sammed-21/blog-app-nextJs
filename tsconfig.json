@@ -19,21 +19,13 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
-      // "baseUrl": "src/",
-      // "paths": { 
-      //   "@/styles/*": ["styles/*"],
-      //   "@/components/*": ["components/*"],
-      //   "@/context/*":["context/*"],
-      //   "@/utils/*":["utils/*"],
-      //   "@/models/*":["models/*"]
-      // }
-    
-    
+   
   },
   
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/context/ThemeContext.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/context/ThemeContext.js", "src/app/api/auth/[...nextauth]/route.js"],
   "exclude": ["node_modules"]
 }

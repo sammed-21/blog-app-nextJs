@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Hero from "../../public/crypto-devs.png";
-import Button from "@/components/Button/Button";
+import Button from "@/components/button/Button";
 import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
