@@ -43,14 +43,14 @@ const Blog = async ({ params }: { params: { id: number } }) => {
 
       <div className="flex mb-4 w-full justify-between flex-wrap max-xl:flex-col-reverse max-xl:items-center">
         <div className="flex-1 justify-between flex flex-col flex-wrap">
-          <h1 className="texth1">{data.title} </h1>
-          <p className="py-4 ">{data.desc}</p>
+          <h1 className="texth1">{data?.title} </h1>
+          <p className="py-4 ">{data?.desc}</p>
           <div className="flex gap-2 items-center"> <Image src={Sam} width={40} height={40} className="rounded-full" alt={""} />
           <p>sammed jain</p></div>
           
       </div>
         <div className="h-300 w-200 flex-1">
-          <Image src={data.img ||  "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"} alt={""}
+          <Image src={data?.img ||  "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"} alt={""}
             width={600} height={258} className="w-[600px] h-[300px] " />
         </div>
 
@@ -58,7 +58,7 @@ const Blog = async ({ params }: { params: { id: number } }) => {
       <div>
         <p className="text-xl">
 
-        {data.content} </p>
+        {data?.content} </p>
       </div>
 
 

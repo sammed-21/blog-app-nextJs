@@ -7,7 +7,7 @@ import { useState ,useContext, useEffect} from "react";
  
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import Loading from "./loading";
+import Loading from "../loading";
  
 const ContactPage = () => {
  

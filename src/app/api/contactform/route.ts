@@ -15,7 +15,7 @@ export const POST = async (request: NextRequest) => {
     }
 
     console.log("✅");
-    console.log(email);
+    // console.log(email);
     try {
       await transporter.sendMail({
         ...mailOptions,

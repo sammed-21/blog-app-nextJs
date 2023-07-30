@@ -1,8 +1,8 @@
 import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
-import {connect} from "../../../../utils/db.ts";
+import {connect} from "@/utils/db";
  import bcrypt from "bcryptjs"
-import User from "../../../../models/user.ts";  
+import User from "@/models/User";  
 import CredentialsProvider from "next-auth/providers/credentials";
 const handler =NextAuth( {
   // Configure one or more authentication providers

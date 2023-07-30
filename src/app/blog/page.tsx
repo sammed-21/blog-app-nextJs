@@ -1,33 +1,49 @@
-
-
+"use client"
 import React from "react";
+import useSWR from "swr";
 import Link from "next/link";
 import Image from "next/image";
+import Loading from "../loading";
 
-async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/posts`);
-
-  if (!res.ok) {
-    throw new Error("failed to fetch data");
-  }
-
-  return res.json();
+ 
+interface Items {
+  _id: string;
+  img?: string;
+  title?: string;
+  body?: string;
 }
 
 const BlogPage = async () => {
-  const data = await getData();
+  
+  const fetcher = async (url: string) =>
+    await fetch(url).then((res) => res.json());
+  const { data, error, isLoading } = useSWR<Items[]>(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/posts`,
+    fetcher
+  );
+  if (isLoading) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
+ 
 
   return (
     <div className="w-full">
-      {data.map((item:any) => (
+      {data?.map((item: Items, _index: any) => (
         <Link
           href={`/blog/${item._id}`}
-          key={item.id}
+          key={_index}
           className="flex justify-between items-center gap-4 my-5 sm:flex max-md:flex-col-reverse   "
         >
           <div className="flex1">
             <Image
-              src={item.img || "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"}
+              src={
+                item.img ||
+                "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"
+              }
               alt={""}
               width={400}
               height={258}

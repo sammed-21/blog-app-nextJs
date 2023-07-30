@@ -1,10 +1,14 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from 'next/server';
 import {connect} from "@/utils/db";
-import Post from "@/models/post";
+import Post from "@/models/Post";
 
-export const GET = async (request, { params }) => {
+interface Params {
+  id: string;  
+}
+
+export const GET = async (request:NextRequest, { params }:{params:Params}) => {
   const { id } = params;
-
+// console.log(id)
   try {
     await connect();
 
@@ -15,7 +19,7 @@ export const GET = async (request, { params }) => {
     return new NextResponse("Database Error", { status: 500 });
   }
 };
-export const DELETE = async (request, { params }) => {
+export const DELETE = async (request:NextRequest, { params }:{params:Params}) => {
   const { id } = params;
 
   try {

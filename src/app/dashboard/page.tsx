@@ -17,10 +17,10 @@ const DashboardPage: React.FC = () => {
     `/api/posts?username=${session?.data?.user?.name}`,
     fetcher
   );
-  console.log(data);
+  // console.log(data);
   // Check if the session is still loading
   if (session.status === "loading") {
-    return <p>Loading...</p>;
+    return <p><Loading/></p>;
   }
 
   // Check if the user is not authenticated, redirect to login
@@ -63,7 +63,7 @@ const DashboardPage: React.FC = () => {
       });
       mutate()
       e.target.reset();
-    } catch (error) {
+    } catch (error) { 
       console.log(error);
     }
   };
