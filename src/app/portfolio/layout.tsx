@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 import Footer from '@/components/footer/Footer';
-
+ 
 type LayoutProps = {
   children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
   return (
+ 
     <div>
       {/* Add your header or any other common elements */}
       <header>
@@ -21,6 +22,7 @@ const Layout = ({ children }: LayoutProps) => {
        
     
     </div>
+     
   );
 };
 

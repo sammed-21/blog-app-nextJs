@@ -110,10 +110,14 @@ body {
 .light{
   background-color:white;
   color:rgb(44, 43, 43);
+
+
+
 }
 .dark {
-  background-color:rgb(44, 43, 43);
+  background-color:rgb(32, 31, 31);
   color:white;
+
 }
 
 .theme{

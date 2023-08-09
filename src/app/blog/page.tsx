@@ -36,7 +36,7 @@ const BlogPage = async () => {
         <Link
           href={`/blog/${item._id}`}
           key={_index}
-          className="flex justify-between items-center gap-4 my-5 sm:flex max-md:flex-col-reverse   "
+          className="flex justify-between items-center gap-4 my-5 sm:flex max-md:flex-col-reverse drop-shadow-lg "
         >
           <div className="flex1">
             <Image
@@ -46,7 +46,7 @@ const BlogPage = async () => {
               }
               alt={""}
               width={400}
-              height={258}
+              height={458}
               className=""
             />
           </div>

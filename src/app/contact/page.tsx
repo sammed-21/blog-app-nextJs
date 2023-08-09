@@ -8,6 +8,7 @@ import { useState ,useContext, useEffect} from "react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import Loading from "../loading";
+import PageWrapper from "../page-wrapper";
  
 const ContactPage = () => {
  
@@ -25,13 +26,18 @@ const ContactPage = () => {
     else {
       setButtonDisable(true)
     }
-  })
+  },[userForm])
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setLoading(true);
+    console.log('this e down')
+    try {
+      
+ 
+      setLoading(true);
+      console.log('loader is se true')
 
     const response = await axios.post("/api/contactform", { userForm });
-   
+   console.log('response back from the server')
     if (response.data.success) {
       toast.success("form submited !");
       setLoading(false);
@@ -44,22 +50,29 @@ const ContactPage = () => {
       email: "",
       message: "",
     })
-    setLoading(false);
+      setLoading(false);
+    } catch (error:any) {
+      throw new Error(error.message);
+    }
+    finally {
+      setLoading(false);
+    }
   };
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center  items-center gap-10" >
+      <PageWrapper>
+    <div className="w-full min-h-screen flex flex-col justify-center  items-center gap-8" >
       <Toaster />
-      <h1 className="texth1 max-md:text-xl ">Let's Keep in Touch</h1>
+      {loading ? <Loading /> : <>
+      <h1 className="texth1 max-md:text-xl">Let's Keep in Touch</h1>
       <div className="flex justify-evenly w-full space-x-10 max-md:flex-col">
         <div className="flex-1 justify-center items-center w-full flex max-md:w-200 ">
-          {loading ? <Loading /> :
             <Image
               src="/crypto-devs.png"
-               className="animate-bounce-slow object-contain "
-              width={300}
-              height={300}
+              className="animate-bounce-slow object-contain "
+              width={400}
+              height={400}
               alt="this is the image"
-            />}
+              />
         </div>
         <form
           className={`flex flex-col flex-1 space-y-3 justify-between max-sm:justify-center `}
@@ -73,7 +86,7 @@ const ContactPage = () => {
             onChange={(e) =>
               setUserForm((prev) => ({ ...prev, name: e.target.value }))
             }
-          />
+            />
           <input
             type="email"
             placeholder="email"
@@ -92,13 +105,16 @@ const ContactPage = () => {
             onChange={(e) =>
               setUserForm({ ...userForm, message: e.target.value })
             }
-          />
-          <button type="button" className={`py-3 ${buttondisable?"bg-blue-300":"bg-blue-600"}`} disabled={buttondisable}>
+            />
+          <button type="submit" className={`py-3 ${buttondisable?"bg-blue-300":"bg-blue-600"}`} disabled={buttondisable}>
      submit
 </button>
         </form>
       </div>
+      </>
+        }
     </div>
+        </PageWrapper>
   );
 };
 

@@ -3,8 +3,9 @@ import Link from "next/link";
 import React from "react";
 import DarkModeToggle from "../DarkModToggle/DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Menu from "../Menu/Menu";
+import { MotionConfig, motion } from "framer-motion";
 
 const links = [
   {
@@ -40,6 +41,7 @@ const links = [
 ];
 
 const Navbar = () => {
+  const path = usePathname()
     const session = useSession();
     const router = useRouter();
     return (
@@ -51,8 +53,13 @@ const Navbar = () => {
               
               <DarkModeToggle/>
               <div className="hidden md:flex gap-4 items-center">
-              {links.map((link)=>(
-                  <Link key={link.id} href={link.url}>{link.title}</Link>
+            {links.map((link) => (
+                
+              <Link key={link.id} href={link.url} className={`${link.url === path ? "font-bold " : "font-normal"}`}>
+                <motion.div whileHover={{scale:1.1}}>
+                {link.title}
+                </motion.div>
+              </Link>
                   ))}
                   {session.status === "authenticated" &&
                   <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut()}>Logout
