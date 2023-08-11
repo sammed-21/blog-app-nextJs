@@ -31,8 +31,10 @@ export default function RootLayout({
               
 
               {children}
-
+               <div className="absolute bottom-0 left-0">
+                
               <Footer />
+</div>
               <div className = "cursor"></div>
             </div>
           </AuthProvider>
