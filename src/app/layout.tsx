@@ -2,10 +2,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
  
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/context/ThemeContext";
-import AuthProvider from "@/components/AuthProvider";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { ThemeProvider } from "../context/ThemeContext";
+import AuthProvider from "../components/AuthProvider";
 import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {

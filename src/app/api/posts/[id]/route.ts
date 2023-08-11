@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from 'next/server';
-import {connect} from "@/utils/db";
-import Post from "@/models/Post";
+import {connect} from "../../../../utils/db";
+import Post from "../../../../models/Post";
 
 interface Params {
   id: string;  
