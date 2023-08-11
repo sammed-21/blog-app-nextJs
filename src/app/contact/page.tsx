@@ -62,7 +62,7 @@ const ContactPage = () => {
       <PageWrapper>
     <div className="w-full min-h-screen flex flex-col justify-center  items-center gap-8" >
       <Toaster />
-      {loading ? <Loading /> : <>
+      {loading ? <Loading /> :<div>
       <h1 className="texth1 max-md:text-xl">Let's Keep in Touch</h1>
       <div className="flex justify-evenly w-full space-x-10 max-md:flex-col">
         <div className="flex-1 justify-center items-center w-full flex max-md:w-200 ">
@@ -111,7 +111,7 @@ const ContactPage = () => {
 </button>
         </form>
       </div>
-      </>
+      </div>
         }
     </div>
         </PageWrapper>

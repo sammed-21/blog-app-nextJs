@@ -16,11 +16,12 @@ export default function Home() {
         
           <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
           {/* <h1 className="text-7xl font-semibold text-transparent bg-gradient-to-b from-blue-500 to-gray-400 bg-clip-text border-none max-md:text-5xl "> */}
-              <span className="text-6xl animate-pulse bg-gradient-to-r from-blue-600 via-blue-500 to-violet-700 bg-clip-text"> I'm
-              </span> 
-              <br />
+              {/* <span className="text-6xl animate-pulse bg-gradient-to-r from-blue-600 via-blue-500 to-violet-700 bg-clip-text"> I'm
+              </span>  */}
+              {/* <br /> */}
               <span className="animate-pulse bg-gradient-to-r from-blue-600 via-blue-500 to-violet-700 bg-clip-text text-transparent">
-
+                I'm
+                <br/>
             Sammed S Betadur
               </span>
             </h1>
