@@ -1,7 +1,7 @@
  'use client'
 import Image from "next/image";
 import Hero from "../../public/crypto-devs.png";
-import Button from "../components/Button/Button"
+import Button from "../components/Button"
 import PageWrapper from "./page-wrapper";
 
 import { motion, } from "framer-motion";

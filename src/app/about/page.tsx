@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Hero from "../../../public/pexels-photo-3184339.jpeg";
-import Button from "../../components/Button/Button";
+import Button from "@/components/Button";
 import { motion, useScroll } from "framer-motion";
 import PageWrapper from "../page-wrapper";
 

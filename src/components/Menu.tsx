@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useContext } from "react";
-import DarkModeToggle from "../DarkModToggle/DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";

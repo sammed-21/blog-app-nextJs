@@ -60,12 +60,12 @@ const ContactPage = () => {
   };
   return (
       <PageWrapper>
-    <div className="w-full min-h-screen flex flex-col justify-center  items-center gap-8" >
+    <div className="w-full items-center" >
       <Toaster />
-      {loading ? <Loading /> :<div>
-      <h1 className="texth1 max-md:text-xl">Let's Keep in Touch</h1>
-      <div className="flex justify-evenly w-full space-x-10 max-md:flex-col">
-        <div className="flex-1 justify-center items-center w-full flex max-md:w-200 ">
+      {loading ? <Loading /> :<div className="flex flex-col text-center w-full items-center justify-center">
+      <h1 className="texth1 w-full text-center max-md:text-xl">Let's Keep in Touch</h1>
+      <div className="flex items-center w-full py-4 justify-between">
+        <div className="flex-2 justify-center items-center  flex max-md:w-200 ">
             <Image
               src="/crypto-devs.png"
               className="animate-bounce-slow object-contain "
@@ -75,7 +75,7 @@ const ContactPage = () => {
               />
         </div>
         <form
-          className={`flex flex-col flex-1 space-y-3 justify-between max-sm:justify-center `}
+          className={`flex-1 max-w-[50%] flex flex-col max-w-1/2  space-y-3 justify-between max-sm:justify-center `}
           onSubmit={(e) => handleSubmit(e)}
         >
           <input

@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import DarkModeToggle from "../DarkModToggle/DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
 import { useRouter, usePathname } from "next/navigation";
-import Menu from "../Menu/Menu";
+import Menu from "./Menu";
 import { MotionConfig, motion } from "framer-motion";
 
 const links = [
@@ -61,7 +61,7 @@ const Navbar = () => {
                 </motion.div>
               </Link>
                   ))}
-                  {session.status === "authenticated" &&
+                  {session.status ===   "authenticated" &&
                   <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut()}>Logout
                   </button>
                 }

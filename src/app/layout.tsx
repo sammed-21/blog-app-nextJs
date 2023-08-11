@@ -2,10 +2,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
  
-import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
-import AuthProvider from "@/components/AuthProvider/AuthProvider";
+import AuthProvider from "@/components/AuthProvider";
 import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {
@@ -25,13 +25,13 @@ export default function RootLayout({
           <AuthProvider>
             <div
              
-              className="container flex flex-col ">
+              className="container relative flex flex-col ">
               
                  <Navbar />
               
 
               {children}
-               <div className="absolute bottom-0 left-0">
+               <div className="">
                 
               <Footer />
 </div>
