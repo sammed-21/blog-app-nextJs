@@ -1,5 +1,5 @@
 "use client";
-import Button from '@/components/Button';
+import Button from '../../../components/Button';
 import Image from "next/image";
 import main from "../../../../public/illustration.png";
 import { items } from "./data.js";
