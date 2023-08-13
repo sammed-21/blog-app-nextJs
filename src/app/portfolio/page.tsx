@@ -50,8 +50,6 @@ const PortfolioPage = () => {
       <motion.div variants={variants} initial="hidden" animate="show" className="flex gap-10  text-white flex-wrap w-full max-md:flex-col max-md:items-center ">
         {galleryData.map((item, index) => {
           return (
-            <Link
-            href={`/portfolio/${item.title.toLowerCase()}`}>
             <motion.li
             variants={images}
               style={{
@@ -69,9 +67,11 @@ const PortfolioPage = () => {
                 
               }}
               >
+              <Link
+              href={`/portfolio/${item.title.toLowerCase()}`}>
               <span className="titleh1 texth1    ">{item.title}</span>
-              </motion.li>
               </Link>
+              </motion.li>
               
               );
             })}
