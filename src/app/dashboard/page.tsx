@@ -69,7 +69,7 @@ const DashboardPage: React.FC = () => {
   };
   if (session.status === "authenticated") {
     return (
-      <div className="mt-3 flex gap-[100px] max-md:flex-col">
+      <div className="mt-3 flex gap-[100px] mb-4 max-md:flex-col">
         <div className="flex-1  mt-3  ">
           {isLoading
             ? <Loading/>
