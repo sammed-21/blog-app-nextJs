@@ -50,13 +50,15 @@ const PortfolioPage = () => {
       <motion.div variants={variants} initial="hidden" animate="show" className="flex gap-10  text-white flex-wrap w-full max-md:flex-col max-md:items-center ">
         {galleryData.map((item, index) => {
           return (
+            <Link
+              key={index}
+            href={`/portfolio/${item.title.toLowerCase()}`}>
             <motion.li
             variants={images}
               style={{
                 backgroundImage: `url(${item.imageUrl})`,
                 backgroundSize: "cover",
               }}
-              key={index}
               className="borderstyle"
               
               whileHover={{
@@ -67,11 +69,9 @@ const PortfolioPage = () => {
                 
               }}
               >
-              <Link
-              href={`/portfolio/${item.title.toLowerCase()}`}>
               <span className="titleh1 texth1    ">{item.title}</span>
-              </Link>
               </motion.li>
+              </Link>
               
               );
             })}

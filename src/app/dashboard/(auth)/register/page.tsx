@@ -33,10 +33,10 @@ try {
 }
     }
   return (
-      <div className=" w-full flex justify-center ">
-          <div className=" items-center flex flex-col ">
+      <div className=" justify-center w-full min-h-[70vh] items-center flex   max-md:justify-center">
+          <div className=" items-center   ">
               
-             <form className=" rounded-sm flex flex-col flex-1 space-y-3 justify-between" onSubmit={handleSubmit}>
+             <form className="  rounded-sm flex flex-col flex-1 space-y-2 justify-between" onSubmit={handleSubmit}>
                     <input type="text" placeholder="name" className="inputtag" />
                     <input type="email" placeholder="email" className="inputtag py-3" />
                     <input placeholder="password" type="password" className="inputtag"/>

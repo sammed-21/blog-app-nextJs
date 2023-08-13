@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link"
 import { useRouter } from "next/navigation";
 import Loading from "../../../loading";
 
@@ -22,19 +23,24 @@ const Login = () => {
     signIn("credentials", { email, password });
   };
   return (
-    <div className=" items-center flex flex-col max-md:justify-center">
-      <form
-        className=" rounded-sm flex flex-col flex-1 space-y-3 justify-between"
+    <div className="justify-center w-full min-h-[70vh] items-center flex   max-md:justify-center">
+     
+     <div className="items-center">
+       <form
+        className="  rounded-sm flex flex-col flex-1 space-y-2 justify-between"
         onSubmit={handleSubmit}
       >
         <input type="email" placeholder="email" className="inputtag py-3" />
         <input placeholder="password" type="password" className="inputtag" />
-        <button className="w-full py-4 bg-blue-500">Login</button>
+        <button className="w-full py-3 bg-blue-500">Login</button>
       </form>
 
-      <p className="" onClick={() => signIn("google")}>
+      <p className="cursor-pointer" onClick={() => signIn("google")}>
         Login with google
-      </p>
+        </p>
+        <p>or</p>
+        <Link href="/dashboard/register">Create new User</Link> 
+    </div>
     </div>
   );
 };

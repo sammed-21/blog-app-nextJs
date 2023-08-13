@@ -43,7 +43,7 @@ body {
   @apply text-4xl font-bold py-3  
 }
 .inputtag{
- @apply bg-transparent p-4 outline-1 border border-sky-500 
+ @apply bg-transparent py-3 px-9 outline-1 border border-sky-500 
 }
 .borderstyle{
   @apply w-72 h-80 border-4 border-white  relative 
