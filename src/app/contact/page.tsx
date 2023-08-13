@@ -63,7 +63,7 @@ const ContactPage = () => {
     <div className="w-full items-center" >
       <Toaster />
       {loading ? <Loading /> :<div className="flex flex-col text-center w-full items-center justify-center">
-      <h1 className="texth1 w-full text-center max-md:text-xl">Let's Keep in Touch</h1>
+      <h1 className="texth1 w-full text-center max-md:text-xl">Keep in Touch</h1>
       <div className="flex items-center w-full py-4 justify-between">
         <div className="flex-2 justify-center items-center  flex max-md:w-200 ">
             <Image

@@ -20,7 +20,7 @@ export default function Home() {
               </span>  */}
               {/* <br /> */}
               <span className="animate-pulse bg-gradient-to-r from-blue-600 via-blue-500 to-violet-700 bg-clip-text text-transparent">
-                I'm
+                I&apos;m
                 <br/>
             Sammed S Betadur
               </span>
