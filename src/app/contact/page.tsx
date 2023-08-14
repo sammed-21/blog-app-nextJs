@@ -2,7 +2,8 @@
 
 import Image from "next/image";
  
-  
+import Hero from "../../../public/crypto-devs.png";
+
 import { useState ,useContext, useEffect} from "react";
  
 import toast, { Toaster } from "react-hot-toast";
@@ -60,12 +61,12 @@ const ContactPage = () => {
   };
   return (
       <PageWrapper>
-    <div className="w-full items-center" >
+    <div className="relative max-w-screen min-h-[70vh] items-center flex flex-col  max-sm:mr-3" >
       <Toaster />
       {loading ? <Loading /> :<div className="flex flex-col text-center w-full items-center justify-center max-md:flex-col">
       <h1 className="texth1 w-full text-center max-md:text-xl">Keep in Touch</h1>
-      <div className="flex items-center w-full py-4 justify-evenly max-md:flex-col max-md:pr-3">
-        <div className="flex-2 justify-center items-center  flex    ">
+      <div className="relative flex items-center w-full py-4 justify-evenly max-md:flex-col max-md:pr-3">
+        {/* <div className="flex-2 justify-center items-center  flex    ">
             <Image
               src="/crypto-devs.png"
               className="animate-bounce-slow object-contain "
@@ -73,6 +74,15 @@ const ContactPage = () => {
               height={400}
               alt="this is the image"
               />
+        </div> */}
+               <div   className="relative ">
+          <Image
+            src={Hero}
+            alt={"this is the main img"}
+            className="animate-bounce-slow  "
+            width={400}
+            height={500}
+            />
         </div>
         <form
           className={`flex-1 max-w-[45%] flex flex-col max-w-1/2  space-y-3 justify-between max-sm:justify-center  max-md:justify-center max-md:min-w-[80%]`}
