@@ -15,20 +15,6 @@ async function getData(id: number) {
 
   return res.json();
 }
- 
-// interface NewType {
-//   id:number
-// }
-// either Static metadata
- 
-// or Dynamic metadata
-// export async function generateMetadata(param: NewType) {
-//   const post = await getData(param.id)
-//   return {
-//     title: post.title,
-//     description: post.desc
-//   }
-// }
 
 
  
@@ -50,7 +36,7 @@ const Blog = async ({ params }: { params: { id: number } }) => {
           
       </div>
         <div className="h-300 w-200 flex-1">
-          <Image src={data?.img ||  "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"} alt={""}
+          <Image src={data?.img ||  "/public/websites.jpg"} alt={data?.title}
             width={600} height={258} className="w-[600px] h-[300px] " />
         </div>
 

@@ -24,7 +24,7 @@ const variants = {
     <div className="flex flex-col justify-around gap-4 mt-7">
       <div className=" relative">
         <Image
-          className=" w-[100%] h-[300px] object-cover grayscale opacity-75"
+          className=" w-[100%] h-[300px] object-cover grayscale brightness-50"
           src={Hero}
           alt={"this is the main img"}
           width={400}

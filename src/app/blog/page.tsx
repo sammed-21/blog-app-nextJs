@@ -36,18 +36,19 @@ const BlogPage = async () => {
         <Link
           href={`/blog/${item._id}`}
           key={_index}
+          // className="flex justify-between items-center gap-4 my-5 sm:flex max-md:flex-col-reverse drop-shadow-lg "
           className="flex justify-between items-center gap-4 my-5 sm:flex max-md:flex-col-reverse drop-shadow-lg "
         >
           <div className="flex1">
             <Image
               src={
                 item.img ||
-                "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"
+                "/download (2).png"
               }
               alt={""}
-              width={400}
-              height={458}
-              className=""
+              width={300}
+              height={358}
+              className="max-w-[400px] max-h-[458px]"
             />
           </div>
           <div className="flex-1 flex-col flex gap-4">
