@@ -45,9 +45,11 @@ const Navbar = () => {
     const session = useSession();
     const router = useRouter();
     return (
-          <div className='flex  h-[10vh] items-center justify-between px-4 sticky top-4 rounded-lg z-10 backdrop-filter bg-blue-900 backdrop-blur-xl  bg-opacity-50 max-sm:w-full '>
+          <div className='flex  h-[10vh] items-center justify-between px-4 sticky top-4 rounded-lg z-10 backdrop-filter bg-blue-900 backdrop-blur-xl  bg-opacity-50 max-sm:min-w-full max-sm:pr-5 '>
           <Link href="/">
-              IamSAMMED
+          <h2 className="font-bold-xl font-mono">
+          IamSAMMED
+          </h2>
          </Link>
          <div className="flex gap-2 items-center">
               
@@ -55,8 +57,8 @@ const Navbar = () => {
               <div className="hidden md:flex gap-4 items-center">
             {links.map((link) => (
                 
-              <Link key={link.id} href={link.url} className={`${link.url === path ? "font-bold " : "font-normal"}`}>
-                <motion.div whileHover={{scale:1.1}}>
+              <Link key={link.id} href={link.url} className={`${link.url === path ? "font-bold  " : "font-mono"}`}>
+                <motion.div whileHover={{scale:1.1}}> 
                 {link.title}
                 </motion.div>
               </Link>

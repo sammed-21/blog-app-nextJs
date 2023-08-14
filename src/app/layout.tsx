@@ -23,8 +23,8 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <AuthProvider>
-            <div className="container relative flex flex-col ">
-              <div>
+            <div className="container relative flex flex-col max-sm:pr-5">
+              <div className="">
 
               <Navbar />
 

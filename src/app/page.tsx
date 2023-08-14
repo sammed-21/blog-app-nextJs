@@ -12,7 +12,7 @@ export default function Home() {
       <PageWrapper>
 
       <div className="relative  max-w-screen min-h-[70vh] flex justify-center items-center px-6 max-md:flex-col-reverse overflow-hidden max-sm:items-center  max-sm:mt-9 overflow-hidden">
-        <div className="flex-1   justify-cetner flex gap-[50px]  flex-col">
+        <div className="flex-1  justify-cetner flex gap-[50px]  flex-col">
         
           <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
           {/* <h1 className="text-7xl font-semibold text-transparent bg-gradient-to-b from-blue-500 to-gray-400 bg-clip-text border-none max-md:text-5xl "> */}
