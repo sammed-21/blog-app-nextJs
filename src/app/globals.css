@@ -34,7 +34,7 @@ body {
 }
 
 .container{
-  @apply min-w-full min-h-[100vh] m-0 p-0 flex flex-col justify-between flex-wrap pl-[2vh] max-sm:items-center relative
+  @apply min-w-full min-h-[100vh]  flex flex-col justify-between flex-wrap  max-sm:items-center relative px-4
 }
 
 .button{

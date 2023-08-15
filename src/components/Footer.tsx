@@ -3,15 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 const Footer = () => {
   return (
-    <div className='h-[10vh] bottom-0 bg-black-700 flex pt-4 justify-between px-[3vh] items-center max-md:mt-10 border-t border-gray-300'>
+    <div className='h-[10vh] bottom-0 bg-black-700 flex pt-4 justify-between relative  items-center max-md:mt-10 border-t border-gray-300 max-sm:flex-col'>
       <div>&copy; 2023 Sammed, All rights reserved.</div>
-      <div className="flex justify-between space-x-3 opacity-75">
-        <Link href="https://github.com/sammed-21"><Image src="/github-mark.png" alt="facebook blog" width={20}  height={20} /></Link>
-        <Image src="/1.png" alt="facebook blog" width={20}  height={20} />
-        <Image src="/2.png" alt="instagram blog" width={20}  height={20} />
-        <Image src="/3.png" alt="twitter blog" width={20}  height={20} />
-        <Image src="/4.png" alt="youtube blog" width={20}  height={20} />
-      </div>
+      <div className="flex flex-wrap justify-between space-x-3 opacity-75">
+        <Link href="https://github.com/sammed-21"><Image src="/pngwing.com (1).png" alt="facebook blog" width={30}  height={30} /></Link>
+        <Link href="https://twitter.com/samjain2001"> <Image src="/3.png" alt="twitter blog" width={30}  height={30} /></Link>
+        <Link href="https://www.linkedin.com/in/sammed-betadur-8b9b291a5/"> <Image src="/pngwing.com.png" alt="linkdin blog" width={30}  height={30} /></Link>
+        </div>
     </div>
   )
 }
