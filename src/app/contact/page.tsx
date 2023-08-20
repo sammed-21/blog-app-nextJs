@@ -61,21 +61,13 @@ const ContactPage = () => {
   };
   return (
       <PageWrapper>
-    <div className="relative w-[100%]  min-h-[70vh] items-center flex flex-col overflow-hidden  " >
+    <div className="relative w-[100%]  min-h-[70vh] items-center flex flex-col overflow-hidden max-sm:overflow-hidden  " >
       <Toaster />
       {loading ? <Loading /> :<div className="flex flex-col text-center w-full items-center justify-between max-md:flex-col">
       <h1 className="texth1 w-full text-center max-md:text-xl">Keep in Touch</h1>
-      <div className="relative flex items-center min-w-full overflow-hidden py-4 justify-between max-md:flex-col max-md:pr-3">
-        {/* <div className="flex-2 justify-center items-center  flex    ">
-            <Image
-              src="/crypto-devs.png"
-              className="animate-bounce-slow object-contain "
-              width={400}
-              height={400}
-              alt="this is the image"
-              />
-        </div> */}
-               <div   className="relative ">
+      <div className="relative flex items-center w-full overflow-hidden py-4 justify-between max-md:flex-col  ">
+     
+               <div   className="relative max-sm:w-[60%] ">
           <Image
             src={Hero}
             alt={"this is the main img"}

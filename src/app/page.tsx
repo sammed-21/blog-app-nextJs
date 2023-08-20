@@ -11,7 +11,7 @@ export default function Home() {
       {/* <div className='max-w-screen  flex  h-full flex-wrap flex-shrink-0  items-center px-6   '> */}
       <PageWrapper>
 
-      <div className="relative  max-w-screen min-h-[70vh] flex justify-center items-center px-6 max-md:flex-col-reverse overflow-hidden max-sm:items-center  max-sm:mt-9 overflow-hidden">
+      <div className="relative  max-w-screen min-h-[70vh] flex justify-center items-center px-6 max-md:flex-col-reverse  max-sm:items-center  max-sm:mt-9 overflow-hidden">
         <div className="flex-1  justify-cetner flex gap-[50px]  flex-col">
         
           <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
@@ -27,9 +27,15 @@ export default function Home() {
             </h1>
           
           <p className="text-lgs">
-          Becomeing a Full Stack Developer with passion for UI from India.
+         
+              Embarking from India, I fuse frontend artistry with backend wizardry.
+            <br/>
+              Crafting interfaces with HTML, CSS, JavaScript, and empowering them using Express and Next.js.
+            <br/>
+            Continuous learning fuels my innovation in this ever-evolving tech realm.
           </p>
-          <Button text="See Our Work" url="/portfolio" classname={""} />
+            <Button text="See my Work" url="/portfolio" classname={""} />
+            <a href="/Cv.pdf" download={true} className="px-4 py-2 bg-blue-700 w-1/4">Download Cv</a>
         </div>
           <div   className="relative ">
           <Image

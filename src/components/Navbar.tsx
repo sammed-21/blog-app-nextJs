@@ -45,7 +45,7 @@ const Navbar = () => {
     const session = useSession();
     const router = useRouter();
     return (
-          <div className='flex px-3  h-[10vh] items-center justify-between  sticky top-4 rounded-lg z-10 backdrop-filter bg-blue-900 backdrop-blur-xl  bg-opacity-50   '>
+          <div className='flex px-3  h-[10vh] items-center justify-between  sticky top-4 rounded-lg z-10 backdrop-filter bg-blue-900 backdrop-blur-xl  bg-opacity-50    '>
           <Link href="/">
           <h2 className="font-bold-xl font-mono">
           IamSAMMED

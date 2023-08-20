@@ -15,7 +15,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+html{
+  --line-color:#e5e7eb;
+}
 body {
   width: 100%;
   padding: 0;

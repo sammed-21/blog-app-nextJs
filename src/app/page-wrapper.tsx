@@ -1,12 +1,11 @@
 "use client";
 
-import { ReactNode } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { ReactNode, useRef} from "react";
+import { motion, AnimatePresence,useInView } from "framer-motion";
 interface Props {
   children: ReactNode;
 }
-
-export default function PageWrapper({ children }: Props) {
+function  PageWrapper({ children }: Props){
   return (
     <>
       <AnimatePresence>
@@ -22,3 +21,8 @@ export default function PageWrapper({ children }: Props) {
     </>
   );
 }
+export default PageWrapper
+
+ 
+
+ 

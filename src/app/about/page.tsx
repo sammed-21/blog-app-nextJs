@@ -2,87 +2,72 @@
 import React from "react";
 import Image from "next/image";
 import Hero from "../../../public/pexels-photo-3184339.jpeg";
-import Button from "../../components/Button";
-import { motion, useScroll } from "framer-motion";
-import PageWrapper from "../page-wrapper";
+ 
+import { motion } from "framer-motion";
+import PageWrapper  from "../page-wrapper";
+import Experience from "@/components/Experience";
+import Skills from "@/components/Skills";
 
 const variants = {
-  hidden: { opacity: 0 ,x:100},
+  hidden: { opacity: 0, x: 100 },
   show: {
     opacity: 1,
-    x:0,
+    x: 0,
     transition: {
-      duration:1,
-      staggerChlidren: 0.3,
+      duration: 1,
+      staggerChildren: 0.3,
     },
   },
 };
- const AboutPage = () => {
-   return (
+
+
+
+const AboutPage: React.FC = () => {
+  return (
     <PageWrapper>
-       
-    <div className="flex flex-col justify-around gap-4 mt-7">
-      <div className=" relative">
-        <Image
-          className=" w-[100%] h-[300px] object-cover grayscale brightness-50"
-          src={Hero}
-          alt={"this is the main img"}
-          width={400}
-          height={500}
-        />
-        <motion.div variants={variants} className="absolute bottom-8 font-bold text-4xl left-5 bg-blue-500 text-white max-sm:text-lg">
-          <h1>Digital Storytellers</h1>
-          <h2>Handcrafting award winning digital expriences</h2>
-        </motion.div>
-      </div>
-      <div className="flex bg-black-400 gap-9 py-4 max-md:flex-col max-md:w-full max-md:flex-0 ">
-        <motion.div variants={variants} className="flex-1 ">
-          <h1 className="texth1 ">Who are We?</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br /> Molestiae fugit accusantium reprehenderit adipisci nam sit
-            necessitatibus error, delectus ipsum deserunt. Eligendi commodi
-            omnis veniam assumenda, repellendus rerum architecto modi eos.
-          </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br /> Molestiae fugit accusantium reprehenderit adipisci nam sit
-            necessitatibus error, delectus ipsum deserunt. Eligendi commodi
-            omnis veniam assumenda, repellendus rerum architecto modi eos.
-          </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br /> Molestiae fugit accusantium reprehenderit adipisci nam sit
-            necessitatibus error, delectus ipsum deserunt. Eligendi commodi
-            omnis veniam assumenda, repellendus rerum architecto modi eos.
+      <div className="flex flex-col justify-center  gap-8 mt-7 items-center">
+        {/* Hero section */}
+        <div className="relative w-full h-[300px]">
+          {/* Image */}
+          <Image
+            className="w-full h-full object-cover grayscale brightness-50"
+            src={Hero}
+            alt="Main Image"
+            width={400}
+            height={500}
+          />
+          {/* Text */}
+          <motion.div
+             variants={variants}
+             initial="hidden"
+             animate="show"
+             className="absolute bottom-8 left-5 max-sm:text-lg text-white"
+          >
+            <h1 className="text-4xl font-bold">Web Developer</h1>
+            <h2 className="text-xl">
+              Bringing Life to the Web with Frontend and Backend Magic
+            </h2>
+          </motion.div>
+        </div>
+
+        {/* About Me section */}
+        <motion.div variants={variants} initial="hidden" animate="show" className="text-center max-w-2xl">
+          <h1 className="text-3xl font-bold mb-2">About Me</h1>
+          <p className="text-lg">
+            I am Sammed, a passionate web developer with expertise in both frontend and backend technologies. I specialize in creating modern, responsive, and user-friendly web applications that deliver exceptional user experiences.
           </p>
         </motion.div>
 
-        <motion.div variants={variants} className="flex-1 flex justify-evenly flex-col gap-4">
-          <h1 className="texth1">Who are We?</h1>
-          <p className="gap-3 flex">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br /> Molestiae fugit accusantium reprehenderit adipisci nam sit
-            necessitatibus error, delectus ipsum deserunt. Eligendi commodi
-            omnis veniam assumenda, repellendus rerum architecto modi eos.
-            <br />
-            <br />
-            -Creative Illustrations
-            <br />
-            <br />
-            -Dynamic Websites
-            <br />
-            <br />
-            -Fast and Handy Mobile App
-            <br />
-          </p>
-          <Button text="contact" url="/contact" classname={""} />
+        {/* Who are We section */}
+    <Skills/>
+        {/* Experience section */}
+        <motion.div variants={variants} initial="hidden" animate="show" className=" ">
+         
+          <Experience/>
+       
         </motion.div>
       </div>
-    </div>
-          </PageWrapper>
+    </PageWrapper>
   );
 };
 
