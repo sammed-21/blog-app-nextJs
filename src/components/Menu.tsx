@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState, useContext } from "react";
-import DarkModeToggle from "./DarkModeToggle";
+// import DarkModeToggle from "./DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ThemeContext } from "../context/ThemeContext";
+// import { ThemeContext } from "../context/ThemeContext";
  
 const links = [
   {
@@ -16,8 +16,8 @@ const links = [
   },
   {
     id: 2,
-    title: "Portfolio",
-    url: "/portfolio",
+    title: "Project",
+    url: "/project",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const Navbar = () => {
   const session = useSession();
   const router = useRouter();
   const [open, setOpen] = useState(false);
-  const { mode, toggle } = useContext(ThemeContext);
+  // const { mode, toggle } = useContext(ThemeContext);
 
   return (
     <div className="z-100   justify-center flex items-center  ">
@@ -55,24 +55,26 @@ const Navbar = () => {
           alt=""
           width={30}
           height={30}
+          className="dark:bg-transparent dark:text-white"
           onClick={(prev) => setOpen(true)}
         />
       ) : (
         <Image
-          className="invert"
+          
           src="/cross.png"
           alt=""
           width={30}
-          height={30}
+            height={30}
+            className="dark:text-white"
           onClick={(prev) => setOpen(false)}
         />
       )}
 
       {open && (
         <div
-          className={`${
-            mode === "light" ? "text-white" : "text-white"
-          } transition-opacity flex flex-col items-center gap-4 absolute  right-0 h-[calc(100vh-10vh)] w-full text-2xl justify-center  top-[10vh]  backdrop-filter bg-black backdrop-blur-xl z-100  bg-opacity-90 min-screen-h `}
+          className={`
+           
+       transition-opacity flex flex-col items-center gap-4 absolute  right-0 h-[calc(100vh-10vh)] w-full text-2xl justify-center  top-[10vh]  backdrop-filter bg-black backdrop-blur-xl z-100  bg-opacity-90 min-screen-h `}
         > 
           {links.map((link) => (
             <Link key={link.id} href={link.url}  onClick={() => setOpen(false)}>

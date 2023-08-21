@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import DarkModeToggle from "./DarkModeToggle";
+// import DarkModeToggle from "./DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
 import { useRouter, usePathname } from "next/navigation";
 import Menu from "./Menu";
 import { MotionConfig, motion } from "framer-motion";
+import ThemeSwitch from "./ThemeSwitch";
 
 const links = [
   {
@@ -15,8 +16,8 @@ const links = [
   },
   {
     id: 2,
-    title: "Portfolio",
-    url: "/portfolio",
+    title: "Projects",
+    url: "/project",
   },
   {
     id: 3,
@@ -45,7 +46,7 @@ const Navbar = () => {
     const session = useSession();
     const router = useRouter();
     return (
-          <div className='flex px-3  h-[10vh] items-center justify-between  sticky top-4 rounded-lg z-10 backdrop-filter bg-blue-900 backdrop-blur-xl  bg-opacity-50    '>
+          <div className='flex px-3  h-[10vh] items-center justify-between  sticky top-4 rounded-lg z-10 backdrop-filter bg-gray-800 backdrop-blur-xl  bg-opacity-50    '>
           <Link href="/">
           <h2 className="font-bold-xl font-mono">
           IamSAMMED
@@ -53,7 +54,8 @@ const Navbar = () => {
          </Link>
          <div className="flex gap-2 items-center">
               
-              <DarkModeToggle/>
+          {/* <DarkModeToggle /> */}
+          <ThemeSwitch/>
               <div className="hidden md:flex gap-4 items-center">
             {links.map((link) => (
                 

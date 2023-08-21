@@ -18,12 +18,14 @@
 html{
   --line-color:#e5e7eb;
 }
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
 body {
   width: 100%;
   padding: 0;
   margin:  0;
-  color:aliceblue;
-  background-color: black;
+ 
    
   /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -74,7 +76,7 @@ body {
 }
 
 /* The slider */
-.switch-container .slider {
+/* .switch-container .slider {
   --background: linear-gradient(to right, #090613ef, #18151f);
   position: absolute;
   cursor: pointer;
@@ -107,10 +109,10 @@ body {
 .switch-container input:checked + .slider:before {
   transform: translateX(100%);
   box-shadow: inset 8px -4px 0px 0px #f8f8f4;
-}
+} */
 
 /* dark mode */
-.light{
+/* .light{
   background-color:white;
   color:rgb(44, 43, 43);
 
@@ -121,7 +123,7 @@ body {
   background-color:rgb(32, 31, 31);
   color:white;
 
-}
+} */
 
 .theme{
   transition:1s all ease

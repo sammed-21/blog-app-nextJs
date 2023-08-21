@@ -30,8 +30,9 @@ export default function Experience() {
                                 
                                 icon={item.icon}
                                 iconStyle={{
-                                    background: "white",
-                                    fontSize:"1.5rem"
+                                    background: "gray",
+                                    fontSize: "1.5rem",
+                                    
                                 }}
                             >    
                                 <h3 className='font-semibold capitalize'>{item.title}</h3>
