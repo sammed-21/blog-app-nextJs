@@ -55,7 +55,7 @@ const Navbar = () => {
           alt=""
           width={30}
           height={30}
-          className="dark:bg-transparent dark:text-white"
+          className="text-black dark:bg-transparent dark:text-white "
           onClick={(prev) => setOpen(true)}
         />
       ) : (
@@ -65,7 +65,7 @@ const Navbar = () => {
           alt=""
           width={30}
             height={30}
-            className="dark:text-white"
+            className="text-black dark:text-white"
           onClick={(prev) => setOpen(false)}
         />
       )}
@@ -77,7 +77,7 @@ const Navbar = () => {
        transition-opacity flex flex-col items-center gap-4 absolute  right-0 h-[calc(100vh-10vh)] w-full text-2xl justify-center  top-[10vh]  backdrop-filter bg-black backdrop-blur-xl z-100  bg-opacity-90 min-screen-h `}
         > 
           {links.map((link) => (
-            <Link key={link.id} href={link.url}  onClick={() => setOpen(false)}>
+            <Link key={link.id} href={link.url}  className="!text-white" onClick={() => setOpen(false)}>
               {link.title}
             </Link>
           ))}
