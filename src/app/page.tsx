@@ -4,7 +4,7 @@ import Hero from "../../public/crypto-devs.png";
 import Button from "../components/Button"
 import Link from 'next/link'
 import PageWrapper from "./page-wrapper";
- 
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 
@@ -21,7 +21,8 @@ export default function Home() {
           <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
         
           <span className="animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black dark:bg-none dark:text-white bg-clip-text text-transparent">
-                 I&apos;m
+              {/* <span className=" animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text text-transparent"> */}
+                I&apos;m
                 <br/>
             Sammed S Betadur
               </span>

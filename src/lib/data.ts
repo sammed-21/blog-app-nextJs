@@ -1,4 +1,4 @@
-import blog from "/public/blog.jpg";
+import blog from "/public/portfolio.jpg";
 import Search from "/public/searchBoard.jpg";
 import Movie from "/public/Movie.jpg";
 import NftDrap from "/public/Nft-Drap.jpg";
