@@ -40,7 +40,7 @@ body {
 .container{
   @apply min-w-full min-h-[100vh]  flex flex-col justify-between flex-wrap  max-sm:items-center relative px-4
 }
-
+ 
 .button{
   @apply p-[15px] cursor-pointer bg-blue-600 border border-none rounded-sm w-max text-white
 }
@@ -48,7 +48,7 @@ body {
   @apply text-4xl font-bold py-3  
 }
 .inputtag{
- @apply bg-transparent py-3 px-9 outline-1 border border-sky-500 
+ @apply bg-transparent py-3 px-9 outline-1 border border-sky-500 max-sm:px-0
 }
 .borderstyle{
   @apply w-72 h-80 border-4 border-white  relative 
@@ -132,7 +132,7 @@ body {
 /* loader */
 .loader {
   position: absolute;
-  top: 0;
+  top: 10vh;
   bottom: 0;
   left: 0;
   right: 0;

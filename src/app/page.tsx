@@ -12,18 +12,16 @@ import { motion, } from "framer-motion";
 export default function Home() {
   return (
     <>
-      {/* <div className='max-w-screen  flex  h-full flex-wrap flex-shrink-0  items-center px-6   '> */}
+   
       <PageWrapper>
 
       <div className="relative  max-w-screen min-h-[70vh] flex justify-center items-center px-6 max-md:flex-col-reverse  max-sm:items-center  max-sm:mt-9 overflow-hidden">
         <div className="flex-1  justify-cetner flex gap-[50px]  flex-col">
         
           <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
-          {/* <h1 className="text-7xl font-semibold text-transparent bg-gradient-to-b from-blue-500 to-gray-400 bg-clip-text border-none max-md:text-5xl "> */}
-              {/* <span className="text-6xl animate-pulse bg-gradient-to-r from-blue-600 via-blue-500 to-violet-700 bg-clip-text"> I'm
-              </span>  */}
-              {/* <br /> */}
-              <span className="animate-pulse bg-gradient-to-r from-blue-600 via-blue-500 to-violet-700 bg-clip-text text-transparent">
+        
+          <span className="animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black dark:bg-none dark:text-white bg-clip-text text-transparent">
+              {/* <span className=" animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text text-transparent"> */}
                 I&apos;m
                 <br/>
             Sammed S Betadur
@@ -38,24 +36,7 @@ export default function Home() {
             <br/>
             Continuous learning fuels my innovation in this ever-evolving tech realm.
             </p>
-            {/* <div className="flex w-1/2 space-x-3 justify-center">
-            <motion.span
-            className="absolute left-0"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            
-               
-                <Link href="/portfolio">See Work</Link>
-            <a href="/Cv.pdf" download={true} className="px-4 py-2 bg-blue-500 w-full">Download Cv</a>
-          </motion.span>
-            </div> */}
+         
              <motion.div
         className="flex flex-col sm:flex-row justify-start gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
@@ -65,14 +46,11 @@ export default function Home() {
         }}
       >
         <Link
-          href="#contact"
+          href="/contact"
           className="group bg-gray-900 text-white px-7 py-3 flex  gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          // onClick={() => {
-          //   // setActiveSection("Contact");
-          //   // setTimeOfLastClick(Date.now());
-          // }} 
+     
         >
-          Contact me here{" "}
+          Contact me {" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -89,14 +67,14 @@ export default function Home() {
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="https://github.com/sammed-21"
           target="_blank"
         >
           <FaGithubSquare />
         </a>
       </motion.div>
         </div>
-          <div   className="relative ">
+          <div   className="relative flex-1 flex justify-center">
           <Image
             src={Hero}
             alt={"this is the main img"}

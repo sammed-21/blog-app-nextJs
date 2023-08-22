@@ -61,16 +61,16 @@ const ContactPage = () => {
   };
   return (
       <PageWrapper>
-    <div className="relative w-[100%]  min-h-[70vh] items-center flex flex-col overflow-hidden max-sm:overflow-hidden  " >
+    <div className="relative max-screen-w  min-h-[70vh] items-center flex flex-col overflow-hidden max-sm:overflow-hidden  " >
       <Toaster />
-      {loading ? <Loading /> :<div className="flex flex-col text-center w-full items-center justify-between max-md:flex-col">
+      {loading ? <Loading /> :<div className="flex flex-col text-center w-full items-center justify-center max-md:flex-col">
       <h1 className="texth1 w-full text-center max-md:text-xl">Keep in Touch</h1>
-      <div className="relative flex items-center  max-w-screen overflow-hidden py-4 justify-evenly max-md:flex-col  ">
-      <div   className="relative ">
+      <div className="w-full flex py-4 justify-evenly max-md:min-screen-w max-md:flex-col max-sm:px-2 max-md:item-center  ">
+      <div   className="relative flex-1 min-screen-w max-w-[400px] max-h-[500px]">
           <Image
             src={Hero}
             alt={"this is the main img"}
-            className="animate-bounce-slow  "
+            className="animate-bounce-slow object-contain "
             width={400}
             height={500}
             />
@@ -85,7 +85,7 @@ const ContactPage = () => {
             />
         </div> */}
         <form
-          className={`flex-1 relative max-w-full flex flex-col max-w-1/2  space-y-3 justify-between max-sm:justify-center  max-md:justify-center max-md:min-w-screen`}
+          className={`flex-2 relative max-w-1/2 flex flex-col   space-y-3 justify-between max-md:flex-2 max-sm:justify-center  max-md:justify-center max-md:min-w-screen`}
           onSubmit={(e) => handleSubmit(e)}
         >
           <input

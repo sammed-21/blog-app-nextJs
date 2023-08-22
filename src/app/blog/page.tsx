@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import React from "react";
 import useSWR from "swr";
 import Link from "next/link";
 import Image from "next/image";
 import Loading from "../loading";
 
- 
 interface Items {
   _id: string;
   img?: string;
@@ -14,7 +13,6 @@ interface Items {
 }
 
 const BlogPage = async () => {
-  
   const fetcher = async (url: string) =>
     await fetch(url).then((res) => res.json());
   const { data, error, isLoading } = useSWR<Items[]>(
@@ -28,7 +26,6 @@ const BlogPage = async () => {
       </div>
     );
   }
- 
 
   return (
     <div className="w-full">
@@ -41,10 +38,7 @@ const BlogPage = async () => {
         >
           <div className="flex1">
             <Image
-              src={
-                item.img ||
-                "/download (2).png"
-              }
+              src={item.img || "/download (2).png"}
               alt={""}
               width={300}
               height={358}

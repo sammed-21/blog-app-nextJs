@@ -1,84 +1,4 @@
-// 'use client'
-// import { motion } from "framer-motion";
-// import Link from "next/link";
-// import PageWrapper from "../page-wrapper";
 
-// const PortfolioPage = () => {
-//   const galleryData = [
-  
-//     {
-//       title: "Websites",
-//       imageUrl: "/websites.jpg",
-//     },
-//     {
-//       title: "Applications",
-//       imageUrl: "/apps.jpg",
-//     },
-//   ];
-
-//   const variants = {
-//     hidden: { opacity: 0 },
-//     show: {
-//       opacity: 1,
-//       transition: {
-//       staggerChlidren:0.3
-//       }
-//     }
-//   }
-
-//   const images = {
-//     hidden: {
-//       opacity: 0,
-//       y: 30,
-//     },
-//     show: {
-//       opacity: 1,
-//       y: 0,
-//       transition: {
-//         duration:2
-//       }
-//     }
-//   }
-//   return (
-//     <>
-//       <PageWrapper>
-
-//       <h1 className="texth1 my-4">Choose a gallery</h1>
-//       <motion.div variants={variants} initial="hidden" animate="show" className="flex gap-10  text-white flex-wrap w-full max-md:flex-col max-md:items-center ">
-//         {galleryData.map((item, index) => {
-//           return (
-//             <Link
-//               key={index}
-//             href={`/portfolio/${item.title.toLowerCase()}`}>
-//             <motion.li
-//             variants={images}
-//               style={{
-//                 backgroundImage: `url(${item.imageUrl})`,
-//                 backgroundSize: "cover",
-//               }}
-//               className="borderstyle"
-              
-//               whileHover={{
-//                 scale: 1.1,
-//                 transition: {
-//                   duration: .2
-//                 },
-                
-//               }}
-//               >
-//               <span className="titleh1 texth1    ">{item.title}</span>
-//               </motion.li>
-//               </Link>
-              
-//               );
-//             })}
-//       </motion.div>
-//             </PageWrapper>
-//     </>
-//   );    
-// };
-
-// export default PortfolioPage;
 
 "use client";
 import Button from '../../components/Button';
@@ -87,34 +7,14 @@ import Image from "next/image";
 import { items } from "../../lib/data";
 import { motion } from "framer-motion";
  
-// import { useEffect, useRef } from "react";
 
-// interface Item {
-//   id: number;
-//   title: string;
-//   desc: string;
-//   image: {
-//     src: string;
-//     width: number;
-//     height: number;
-//   };
-//   link: string,
-//   language: string,
-  
-// }
-
-// interface Data {
-//   applications: Item[];
-  
-//   websites: Item[];
-// }
 
 const variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChlidren: 0.3,
+      staggerChlidren: 0.3, 
     },
   },
 };
@@ -153,12 +53,7 @@ const Category = ({ params }: { params: { category: keyof typeof items } }) => {
    
 
       <motion.div  >
-        {/* <div className="flex gap-5 "> */}
-          {/* <Button url="/portfolio" text="&larr; back" classname=" font-bold " /> */}
-          {/* <h1 className=" font-bold text-4xl text-blue-600">
-            {params.category}
-          </h1> */}
-        {/* </div> */}
+     
 
         {data?.map((item) => (
           <motion.div
