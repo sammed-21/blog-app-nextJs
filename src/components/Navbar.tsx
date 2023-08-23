@@ -34,11 +34,11 @@ const links = [
     title: "Contact",
     url: "/contact",
   },
-  {
-    id: 6,
-    title: "Dashboard",
-    url: "/dashboard",
-  },
+  // {
+  //   id: 6,
+  //   title: "Dashboard",
+  //   url: "/dashboard",
+  // },
 ];
 
 const Navbar = () => {
@@ -46,10 +46,10 @@ const Navbar = () => {
     const session = useSession();
     const router = useRouter();
     return (
-          <div className='flex px-3  h-[10vh] items-center justify-between  sticky top-4 rounded-lg z-10 backdrop-filter bg-gray-800 backdrop-blur-xl  bg-opacity-50    '>
+          <div className='flex px-5  h-[10vh] items-center justify-between  sticky top-4 rounded-lg z-10 backdrop-filter bg-gray-800 backdrop-blur-xl  bg-opacity-50    '>
           <Link href="/">
-          <h2 className="font-bold-xl font-mono">
-          IamSAMMED
+          <h2 className="font-bold-xl group bg-white outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 font-mono  p-2 tracking-widest">
+          SAMMED
           </h2>
          </Link>
          <div className="flex gap-2 items-center">
@@ -66,7 +66,7 @@ const Navbar = () => {
               </Link>
                   ))}
                   {session.status ===   "authenticated" &&
-                  <button className="bg-blue-600 py-1  px-3 rounded-lg text-white" onClick={()=>signOut()}>Logout
+              <button className={` bg-blue-600 py-1  px-3 rounded-lg text-white`} onClick={()=>signOut()}>Logout
                   </button>
                 }
                   

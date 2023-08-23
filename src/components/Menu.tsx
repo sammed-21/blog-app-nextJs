@@ -34,11 +34,7 @@ const links = [
     title: "Contact",
     url: "/contact",
   },
-  {
-    id: 6,
-    title: "Dashboard",
-    url: "/dashboard",
-  },
+ 
 ];
 
 const Navbar = () => {
@@ -61,11 +57,11 @@ const Navbar = () => {
       ) : (
         <Image
           
-          src="/cross.png"
+          src="/icons8-close-64.png"
           alt=""
           width={30}
             height={30}
-            className="text-black dark:text-white"
+            className="text-black dark:bg-transparent dark:text-white "
           onClick={(prev) => setOpen(false)}
         />
       )}

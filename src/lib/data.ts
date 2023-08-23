@@ -65,8 +65,8 @@ export const items = [
 export const experiencesData = [
   {
     title: "Frontend Developer",
-    role: "Girnar Sales (Freelance)",
-    location: "Girnar Sales (Freelance), Remote",
+    role: "Girnar Sales ",
+    location: "Girnar Sales, Remote (Freelance)",
     date: "Apr 2023 to May 2023",
     description:
     "Developed a bespoke internal tool for Girnar Sales, encompassing essential components like login, customer management, and sales features. Designed user-friendly interfaces, integrated Rest-APIs for data efficiency, and leveraged Next.js, Tailwind CSS, and JavaScript for a modern, responsive web app.",

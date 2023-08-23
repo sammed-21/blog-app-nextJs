@@ -41,10 +41,7 @@ const Blog = async ({ params }: { params: { id: number } }) => {
             <p>{data?.username}</p>
           </div>
         </div>
-        {/* <div className="relative w-full h-300 w-200 flex-1">
-          <Image src={data?.img} alt={data?.title}
-            width={600} height={258} className="w-[600px] h-[300px] " />
-        </div> */}
+    
         <div className="flex-1 relative h-[400px] flex   justify-center">
           <Image
             src={data?.img}
