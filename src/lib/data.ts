@@ -2,6 +2,7 @@ import blog from "/public/portfolio.jpg";
 import Search from "/public/searchBoard.jpg";
 import Movie from "/public/Movie.jpg";
 import NftDrap from "/public/Nft-Drap.jpg";
+import AiPrompt from "/public/AiPrompt.png"
 import RealChat from "/public/RealChat.jpg";
 import MuonCapital from "/public/MuonCapital.jpg";
 import { CgWorkAlt } from "react-icons/cg";
@@ -12,6 +13,14 @@ import React from "react";
 export const items = [
   {
     id: 1,
+    title: "Ai Prompt Application | NextJs",
+    desc: "By using debouncing and Google OAuth for user authentication, users may publish and filter out their own content.",
+    image: AiPrompt,
+    link: "https://ai-prompt-next-application.vercel.app/",
+    language: "Next ,Js, Tailwindcss, Mongodb, Next-Auth , google OAuth",
+  },
+  {
+    id: 2,
     title: "Blog Application",
     desc: "This application allows users to create, publish, and read blog. Anyone can access and read these blogs.. To enhance the functionality, I have also integrated Nodemailer for email communication within the application",
     image: blog,
@@ -19,7 +28,7 @@ export const items = [
     language: "TypeScript, NextJs, Tailwindcss, Mongodb, Next-Auth",
   },
   {
-    id: 2,
+    id: 3,
     title: "SearchBoard",
     desc: "evelop a search and filter application Using Next.js,SCSS,TypeScript, I’ve built a Search and Filter Application ,  I developed a feature for filtering by price, review, and brand and created a responsive website using SCSS",
     image: Search,
@@ -27,7 +36,7 @@ export const items = [
     language: "TypeScript, ReactJs, SASS, FakerApi",
   },
   {
-    id: 3,
+    id: 4,
     title: "Movie-Search",
     desc: " The Watchlist Application is built using JavaScript, React.js, React Redux, Context API, and CSS. Users can search, add movies to their watchlist, and manage their collections. Movies are fetched from an TMDB API and dynamically displayed on the page, ensuring an up-to-date movie collection",
     image: Movie,
@@ -36,7 +45,7 @@ export const items = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Nft Drop Application",
     desc: " The Nft-Drop Collections Application . In this application where user can claim nft with 0.01 Ethers and get a air drop to there address",
     image: NftDrap,
@@ -44,7 +53,7 @@ export const items = [
     language: "TypeScript, NextJs, Tailwindcss, ThirdWeb,Polygon",
   },
   {
-    id: 5,
+    id: 6,
     title: "Trellos",
     desc: "TaskFlow: Streamlined Task Management with Modern Design. Organize, prioritize, and collaborate effectively by creating, tracking, and listing todos in this user-friendly Trello-inspired application.",
     image: MuonCapital,
@@ -53,7 +62,7 @@ export const items = [
       "JavaScript , Tailwindcss , ReactJs, Redux State Management, contextAPI",
   },
   {
-    id: 6,
+    id: 7,
     title: "Real Chat Application using AppWrite ",
     desc: "This application leverages React, Appwrite, and Tailwind CSS to empower users to seamlessly create accounts, login, and engage in real-time peer-to-peer chat, offering a dynamic and modern communication experience.",
     image: RealChat,
