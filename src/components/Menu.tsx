@@ -7,37 +7,10 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 // import { ThemeContext } from "../context/ThemeContext";
+import { links } from '../lib/data';
  
-const links = [
-  {
-    id: 1,
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: 2,
-    title: "Project",
-    url: "/project",
-  },
-  {
-    id: 3,
-    title: "Blog",
-    url: "/blog",
-  },
-  {
-    id: 4,
-    title: "About",
-    url: "/about",
-  },
-  {
-    id: 5,
-    title: "Contact",
-    url: "/contact",
-  },
  
-];
-
-const Navbar = () => {
+const Menu  = ( ) => {
   const session = useSession();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -73,7 +46,7 @@ const Navbar = () => {
        transition-opacity flex flex-col items-center gap-4 absolute  right-0 h-[calc(100vh-10vh)] w-full text-2xl justify-center  top-[10vh]  backdrop-filter bg-black backdrop-blur-xl z-100  bg-opacity-90 min-screen-h `}
         > 
           {links.map((link) => (
-            <Link key={link.id} href={link.url}  className="!text-white" onClick={() => setOpen(false)}>
+            <Link key={link.title} href={link.url}  className="!text-white" onClick={() => setOpen(false)}>
               {link.title}
             </Link>
           ))}
@@ -91,4 +64,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Menu;

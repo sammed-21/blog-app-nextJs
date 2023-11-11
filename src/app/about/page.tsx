@@ -5,8 +5,8 @@ import Hero from "../../../public/pexels-photo-3184339.jpeg";
  
 import { motion } from "framer-motion";
 import PageWrapper  from "../page-wrapper";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
+// import Experience from "@/components/Experience";
+// import Skills from "@/components/Skills";
 
 const variants = {
   hidden: { opacity: 0, x: 100 },
@@ -59,11 +59,11 @@ const AboutPage: React.FC = () => {
         </motion.div>
 
         {/* Who are We section */}
-    <Skills/>
+    {/* <Skills/> */}
         {/* Experience section */}
         <motion.div variants={variants} initial="hidden" animate="show" className=" ">
          
-          <Experience/>
+          {/* <Experience/> */}
        
         </motion.div>
       </div>

@@ -7,13 +7,33 @@ import PageWrapper from "./page-wrapper";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-
 import { motion, } from "framer-motion";
+import Intro from "../components/intro";
+import AboutPage from "../components/about";
+import Projects from "../components/projects";
+import ContactPage from "../components/contact";
+// import Skills from "../components/Skills";
+// import Experience from '../components/experience';
+import SectionDivider from "../components/section-divider";
+import Experience from "../components/experience";
+ import Skills from "../components/skills"
+ 
 export default function Home() {
   return (
-    <>
-   
-      <PageWrapper>
+    <main className ="flex flex-col items-center px-4 scroll-mt-30">
+      <Intro />
+      <SectionDivider/>
+      <AboutPage />
+      <SectionDivider/>
+      <Skills />
+      <SectionDivider/>
+      <Experience/>
+      <SectionDivider/>
+      <Projects />
+      {/* <SectionDivider/> */}
+
+      <ContactPage/>
+      {/* <PageWrapper>
 
       <div className="relative  max-w-screen min-h-[70vh] flex justify-center items-center px-6 max-md:flex-col-reverse  max-sm:items-center  max-sm:mt-9 overflow-hidden">
         <div className="flex-1  justify-cetner flex gap-[50px]  flex-col">
@@ -21,8 +41,7 @@ export default function Home() {
           <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
         
           <span className="animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black dark:bg-none dark:text-white bg-clip-text text-transparent">
-              {/* <span className=" animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text text-transparent"> */}
-                I&apos;m
+                 I&apos;m
                 <br/>
             Sammed S Betadur
               </span>
@@ -61,7 +80,7 @@ export default function Home() {
         >
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
+        </a> */}
 
  
 
@@ -72,7 +91,7 @@ export default function Home() {
         >
           <FaGithubSquare />
         </a> */}
-      </motion.div>
+      {/* </motion.div>
         </div>
           <div   className="relative flex-1 flex justify-center">
           <Image
@@ -85,7 +104,8 @@ export default function Home() {
         </div>
         </div>
     
-            </PageWrapper>
-    </>
+      </PageWrapper> */}
+      
+    </main>
   );
 }

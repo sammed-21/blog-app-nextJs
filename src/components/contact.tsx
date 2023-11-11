@@ -7,9 +7,13 @@ import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 // import Loading from "../loading";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "../context/active-section-context";
+import { useSectionInView } from "../lib/hooks";
  
  
 const ContactPage = () => {
+  const { ref } = useSectionInView('Contact')
  
   const [loading, setLoading] = useState(false);
   const [buttondisable, setButtonDisable] = useState(true);
@@ -58,9 +62,9 @@ const ContactPage = () => {
     }
   };
   return (
-    <motion.section
+    <motion.section 
     id="contact"
-   
+   ref = {ref}
     className="mb-20 sm:mb-28 max-screen-w flex justify-center text-center items-center mt-5"
     initial={{
       opacity: 0,
