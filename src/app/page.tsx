@@ -1,38 +1,31 @@
- 'use client'
-import Image from "next/image";
-import Hero from "../../public/crypto-devs.png";
-import Button from "../components/Button"
-import Link from 'next/link'
-import PageWrapper from "./page-wrapper";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
-import { motion, } from "framer-motion";
+"use client";
+
 import Intro from "../components/intro";
 import AboutPage from "../components/about";
 import Projects from "../components/projects";
 import ContactPage from "../components/contact";
-// import Skills from "../components/Skills";
-// import Experience from '../components/experience';
-import SectionDivider from "../components/section-divider";
+import Skills from "../components/skills";
 import Experience from "../components/experience";
- import Skills from "../components/skills"
- 
+
+import SectionDivider from "../components/section-divider";
+// import Experience from "../components/experience";
+//  import Skills from "../components/skills"
+
 export default function Home() {
   return (
-    <main className ="flex flex-col items-center px-4 scroll-mt-30">
+    <main className="flex flex-col items-center px-4 scroll-mt-30">
       <Intro />
-      <SectionDivider/>
+      <SectionDivider />
       <AboutPage />
-      <SectionDivider/>
+      <SectionDivider />
       <Skills />
-      <SectionDivider/>
-      <Experience/>
-      <SectionDivider/>
+      <SectionDivider />
+      <Experience />
+      <SectionDivider />
       <Projects />
       {/* <SectionDivider/> */}
 
-      <ContactPage/>
+      <ContactPage />
       {/* <PageWrapper>
 
       <div className="relative  max-w-screen min-h-[70vh] flex justify-center items-center px-6 max-md:flex-col-reverse  max-sm:items-center  max-sm:mt-9 overflow-hidden">
@@ -82,9 +75,7 @@ export default function Home() {
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a> */}
 
- 
-
-        {/* <a
+      {/* <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer max-md: borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/sammed-21"
           target="_blank"
@@ -105,7 +96,6 @@ export default function Home() {
         </div>
     
       </PageWrapper> */}
-      
     </main>
   );
 }
