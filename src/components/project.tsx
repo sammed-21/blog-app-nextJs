@@ -42,7 +42,7 @@ export default function Project({
             <h5 className="mb-2 text-3xl font-bold tracking-tight text-[#FDF250] ">
               {title}
             </h5>
-            <p className="text-[#fff] font-[DM Sans] text-lg font-normal leading-normal tracking-[-0.2px]">
+            <p className="text-gray-400 font-[DM Sans] text-lg font-normal leading-normal tracking-[-0.2px]">
               {desc}{" "}
             </p>
             <ul className="  mt-4 gap-2 flex h-full flex-wrap  ">
