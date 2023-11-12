@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useContext, useState } from "react";
 // import DarkModeToggle from "./DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
- 
+
 import Menu from "./Menu";
 import { motion } from "framer-motion";
 import ThemeSwitch from "./ThemeSwitch";
@@ -42,20 +42,19 @@ const Navbar = () => {
               key={link.url}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-            > 
+            >
               <Link
                 href={link.url}
                 className={clsx(
-                  "flex w-full   px-2 justify-center py-2 hover:text-gray-950 transition",
+                  "flex w-full   px-2 justify-center py-2 hover:text-gray-550 transition",
                   {
                     "text-gray-950": activeSection === link.title,
                   }
                 )}
                 onClick={() => {
-                  setActiveSection(link.title)
+                  setActiveSection(link.title);
                   setTimeOfLastClick(Date.now());
                 }}
-
               >
                 {/* <Link key={link.title} href={link.url} className={`${link.url === path ? "font-bold  " : "font-mono"}`}> */}
                 <motion.div whileHover={{ scale: 1.1 }}>

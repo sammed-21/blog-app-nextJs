@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 // import SectionHeading from "./section-heading";
 import { skillsData } from "../lib/data";
 // import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "../context/active-section-context";
 import { useSectionInView } from "../lib/hooks";
 
 const fadeInAnimationVariants = {
@@ -25,7 +23,7 @@ const fadeInAnimationVariants = {
 
 export default function Skills() {
   //   const { ref } = useSectionInView("Skills");
-  const { ref } = useSectionInView('Skills')
+  const { ref } = useSectionInView("Skills");
   return (
     <motion.section
       id="skills"

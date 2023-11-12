@@ -1,11 +1,9 @@
-"use client";
-
 import Intro from "../components/intro";
 import AboutPage from "../components/about";
 import Projects from "../components/projects";
 import ContactPage from "../components/contact";
-import Skills from "../components/skills";
-import Experience from "../components/experience";
+import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 
 import SectionDivider from "../components/section-divider";
 // import Experience from "../components/experience";

@@ -21,14 +21,15 @@ async function getData(id: number) {
 
 const Blog = async ({ params }: { params: { id: number } }) => {
   const data = await getData(params.id);
-  
 
   return (
-    <div className="flex flex-wrap relative top-5 justify-center ">
+    <div className="flex flex-wrap relative top-5 justify-center max-w-4xl w-full">
       <div className="flex mb-4 w-full justify-between flex-wrap max-xl:flex-col-reverse max-xl:items-center">
         <div className="flex-1 justify-between flex flex-col flex-wrap">
           <h1 className="texth1">{data?.title} </h1>
-          <p className="py-4 "><span className="font-semibold">description</span>: {data?.desc}</p>
+          <p className="py-4 ">
+            <span className="font-semibold">description</span>: {data?.desc}
+          </p>
           <div className="flex gap-2 items-center">
             {" "}
             <Image
@@ -41,7 +42,7 @@ const Blog = async ({ params }: { params: { id: number } }) => {
             <p>{data?.username}</p>
           </div>
         </div>
-    
+
         <div className="flex-1 relative h-[400px] flex   justify-center">
           <Image
             src={data?.img}

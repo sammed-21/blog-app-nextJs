@@ -3,7 +3,6 @@ import React from "react";
 import useSWR from "swr";
 import Link from "next/link";
 import Image from "next/image";
- 
 
 interface Items {
   _id: string;
@@ -19,10 +18,9 @@ const BlogPage = async () => {
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/posts`,
     fetcher
   );
- 
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-4xl">
       {data?.map((item: Items, _index: any) => (
         <Link
           href={`/blog/${item._id}`}

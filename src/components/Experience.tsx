@@ -1,16 +1,15 @@
 "use client";
 import { experiencesData } from "../lib/data";
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
- import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useSectionInView } from "../lib/hooks";
 const Experience: React.FC = () => {
-    const { ref } = useSectionInView('Experience')
+  const { ref } = useSectionInView("Experience");
   return (
     <motion.div ref={ref} className="text-center" id="experience">
       <span className="text-center text-3xl font-bold"> Experience</span>
