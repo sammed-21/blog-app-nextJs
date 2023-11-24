@@ -3,7 +3,7 @@ import React from "react";
 import useSWR from "swr";
 import Link from "next/link";
 import Image from "next/image";
-
+import { IoMdArrowRoundBack } from "react-icons/io";
 interface Items {
   _id: string;
   img?: string;
@@ -21,6 +21,12 @@ const BlogPage = async () => {
 
   return (
     <div className="w-full max-w-4xl">
+      <div>
+        <Link href={"/"}>
+          <IoMdArrowRoundBack />
+          back Home
+        </Link>
+      </div>
       {data?.map((item: Items, _index: any) => (
         <Link
           href={`/blog/${item._id}`}
