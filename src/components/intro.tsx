@@ -3,6 +3,7 @@ import Image from "next/image";
 import Hero from "../../public/crypto-devs.png";
 import Button from "./Button";
 import Link from "next/link";
+
 // import PageWrapper from "./page-wrapper";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
@@ -63,8 +64,8 @@ export default function Intro() {
 
             <a
               className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-              href="/public/Sammed-resume-7026716767.pdf"
-              download
+              href="sammed-resume.pdf"
+              download="sammed-7026716767-resume"
             >
               Download CV{" "}
               <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
