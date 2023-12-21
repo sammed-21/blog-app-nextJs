@@ -34,7 +34,7 @@ const Navbar = () => {
       </Link>
       <div className="flex gap-2 items-center">
         {/* <DarkModeToggle /> */}
-        <ThemeSwitch />
+        {/* <ThemeSwitch /> */}
         <div className="hidden text-gray-950 dark:text-gray-300 md:flex gap-4 items-center">
           {links.map((link) => (
             <motion.li

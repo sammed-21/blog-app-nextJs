@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Hero from "../../public/crypto-devs.png";
+import Hero from "../app/assets/mainIconsdark (1).svg";
 import Button from "./Button";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ export default function Intro() {
       <motion.div
         ref={ref}
         id="home"
-        className="relative scroll-mt-30  max-w-screen min-h-[70vh] flex justify-center items-center px-6 max-md:flex-col-reverse  max-sm:items-center  max-sm:mt-9 overflow-hidden scroll-mt-30"
+        className="relative scroll-mt-30  max-w-screen min-h-[70vh] flex justify-between items-center px-6 max-md:flex-col-reverse  max-sm:items-center  max-sm:mt-9 overflow-hidden scroll-mt-30"
       >
         <div className="flex-1  justify-cetner flex gap-[50px]  flex-col">
           <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
@@ -80,7 +80,7 @@ export default function Intro() {
         </a> */}
           </motion.div>
         </div>
-        <div className="relative flex-1 flex justify-center">
+        <div className="relative flex-1 flex justify-end">
           <Image
             src={Hero}
             alt={"this is the main img"}

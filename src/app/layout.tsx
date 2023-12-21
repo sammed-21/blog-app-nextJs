@@ -20,28 +20,41 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className=" !scroll-smooth ">
-      <body className={`${inter.className}bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}>
+    <html lang="en" className="dark !scroll-smooth ">
+      <body
+        className={`${inter.className}bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}
+      >
         {/* <ThemeProvider> */}
-          <AuthProvider>
-            <div className="container relative flex flex-col max-sm:pr-5">
-             <div className="">
-              <div className="bg-[#e8b8ba] absolute top-[-6rem] -z-10 right-[1rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:w-[68.75rem] dark:bg-[#936161c1] "></div>
-        <div className="bg-[#c6c1ec] absolute bottom-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[14rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394] animate-pulse"></div>
 
-            <ActiveSectionContextProvider>
-              
-              <Navbar />
+        <AuthProvider>
+          <div className="container relative flex flex-col max-sm:pr-5">
+            {/* <div className=""> */}
+            <div className="w-full flex flex-col justify-center items-center h-full relative ">
+              {/* <div className="bg-[#e8b8ba] absolute top-[-6rem] -z-10 right-[1rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:w-[68.75rem] dark:bg-[#936161c1] "></div> */}
+              <div className="absolute -top-[380px] left-0 w-full  h-[350px] -z-10">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  className="rotate-180   -z-10 w-full h-[80vh] object-cover"
+                  // className="rotate-180 absolute top-[-200px] left-0 -z-10 w-full h-[80vh] object-cover"
+                >
+                  <source src="/blackhole.webm" type="video/webm" />
+                </video>
+              </div>
+              <div className="bg-[#c6c1ec] absolute bottom-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[14rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394] animate-pulse"></div>
 
-              {children}
-</ActiveSectionContextProvider>
-             </div>
-              <div className="relative bottom-0 left-0 right-0 z-10 mt-4">
-                <Footer />
-              </div> 
-            
+              <ActiveSectionContextProvider>
+                <Navbar />
+
+                {children}
+              </ActiveSectionContextProvider>
             </div>
-          </AuthProvider>
+            <div className="relative bottom-0 left-0 right-0 z-10 mt-4">
+              <Footer />
+            </div>
+          </div>
+        </AuthProvider>
         {/* </ThemeProvider> */}
       </body>
     </html>
