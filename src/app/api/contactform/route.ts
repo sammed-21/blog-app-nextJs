@@ -1,5 +1,4 @@
 import { mailOptions, transporter } from "../../../utils/nodemailer";
-import { loadDefaultErrorComponents } from "next/dist/server/load-components";
 import { NextRequest, NextResponse } from "next/server";
 
 export const POST = async (request: NextRequest) => {
@@ -14,7 +13,7 @@ export const POST = async (request: NextRequest) => {
       });
     }
 
-    console.log("✅");
+   
     // console.log(email);
     try {
       await transporter.sendMail({

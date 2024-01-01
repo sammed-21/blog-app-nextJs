@@ -10,6 +10,7 @@ import AiPrompt from "/public/AiPrompt.png"
 import RealChat from "/public/RealChat.jpg";
 import Store from "/public/store.png";
 import ScatchBook from "/public/Scatch-book.png";
+import sportmusic from "/public/spotmusic.png";
 import chart from "/public/Screenshot (99).png";
 import CovidTraker from "/public/Screenshot (98).png";
 import MuonCapital from "/public/MuonCapital.jpg";
@@ -94,6 +95,15 @@ export const links = [
   // ] as const;
 ] as const
 export const items = [
+  {
+    id: 11,
+    title: "SpotMusic : music applicatoin",
+    desc: "Built an application where user can sign up and app their own song and listen to the songs, have implemented the stripe payment for premium users",
+    image:sportmusic ,
+    link: "https://spot-music-pi.vercel.app/",
+    language: "Next.js ,Typescript, Tailwindcss, Zustand, expressJs ,NodeJs, Postgresql, supabase ,stripe payment",
+    github:"https://github.com/sammed-21/spotMusic"
+  },
   {
     id: 10,
     title: "Scatch-Book Application ",
