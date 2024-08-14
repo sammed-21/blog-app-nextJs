@@ -18,27 +18,24 @@ import {
 const Navbar = () => {
   const session = useSession();
 
-  const {
-    activeSection,
-    setActiveSection,
-    setTimeOfLastClick,
-  } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   // const [activeSection, setActiveSection] =useState("home")
   return (
-    <nav className="flex px-5  min-w-[70%] left-1/2 h-14 -translate-x-1/2 py-3  items-center justify-between  fixed top-4 rounded-lg z-10 backdrop-filter bg-gray-800 backdrop-blur-xl  bg-opacity-50    ">
+    <nav className="flex px-5  min-w-[40%] left-1/2 h-18 -translate-x-1/2 py-3  items-center justify-between  fixed top-4 rounded-full z-10 backdrop-filter bg-gray-800 backdrop-blur-xl  bg-opacity-50    ">
       <Link href="/">
-        <h2 className="font-bold-xl group bg-white outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 font-mono  p-2 tracking-widest">
+        <h2 className="p-2 font-mono tracking-widest transition bg-white outline-none cursor-pointer font-bold-xl group focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10">
           SAMMED
         </h2>
       </Link>
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         {/* <DarkModeToggle /> */}
         {/* <ThemeSwitch /> */}
-        <div className="hidden text-gray-950 dark:text-gray-300 md:flex gap-4 items-center">
+        <div className="items-center hidden gap-4 text-gray-950 dark:text-gray-300 md:flex">
           {links.map((link) => (
             <motion.li
-              className="h-3/4 relative flex items-center justify-center"
+              className="relative flex items-center justify-center h-3/4"
               key={link.url}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -62,8 +59,7 @@ const Navbar = () => {
                 </motion.div>
                 {link.title === activeSection && (
                   <motion.span
-                    className="bg-gray-100/60 
-                  rounded-md absolute inset-0 -z-10 "
+                    className="absolute inset-0 rounded-md bg-gray-100/60 -z-10 "
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
@@ -86,7 +82,7 @@ const Navbar = () => {
           )}
         </div>
         {/* MOBILE MENU */}
-        <div className="z-100 md:hidden  ">
+        <div className="z-100 md:hidden ">
           <Menu />
         </div>
       </div>

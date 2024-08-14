@@ -12,11 +12,12 @@ const Experience: React.FC = () => {
   const { ref } = useSectionInView("Experience");
   return (
     <motion.div ref={ref} className="text-center" id="experience">
-      <span className="text-center text-3xl font-bold"> Experience</span>
+      <span className="text-3xl font-bold text-center"> Experience</span>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
+              visible={true}
               contentStyle={{
                 background: "#f3f4f6",
                 boxShadow: "none",
@@ -62,7 +63,7 @@ export default Experience;
 
 //   const ExperienceItem: React.FC<Experience> = ({ title, role, date, description ,skill}) => (
 //     <motion.div className="my-6" variants={experienceItemVariants}>
-//       <h2 className="font-bold text-xl">{title}</h2>
+//       <h2 className="text-xl font-bold">{title}</h2>
 //       <p className="text-sm">{role}</p>
 //       <p className="text-sm">{date}</p>
 //       <p className="list-disc ">

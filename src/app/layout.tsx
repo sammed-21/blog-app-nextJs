@@ -29,10 +29,10 @@ export default function RootLayout({
         <AuthProvider>
           <div className="container relative flex flex-col max-sm:pr-5">
             {/* <div className=""> */}
-            <div className="w-full flex flex-col justify-center items-center h-full relative ">
+            <div className="relative flex flex-col items-center justify-center w-full h-full ">
               {/* <div className="bg-[#e8b8ba] absolute top-[-6rem] -z-10 right-[1rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:w-[68.75rem] dark:bg-[#936161c1] "></div> */}
               <div className="absolute -top-[380px] left-0 w-full  -z-10">
-                <video
+                {/* <video
                   autoPlay
                   muted
                   loop
@@ -40,7 +40,7 @@ export default function RootLayout({
                   // className="rotate-180 absolute top-[-200px] left-0 -z-10 w-full h-[80vh] object-cover"
                 >
                   <source src="/blackhole.webm" type="video/webm" />
-                </video>
+                </video> */}
                 <div className="bg-gradient-to-r from-[#060019] via-[#0F062B] to-[#050016] absolute top-[50%] -z-10 right-[1rem] h-[61.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:w-[68.75rem] dark:bg-[#030014] "></div>
               </div>
               <div className="bg-[#c6c1ec] absolute bottom-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[14rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394] animate-pulse"></div>

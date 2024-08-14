@@ -1,12 +1,11 @@
- 
 import { CgWorkAlt } from "react-icons/cg";
- 
+
 import React from "react";
 import blog from "/public/portfolio.jpg";
 import Search from "/public/searchBoard.jpg";
 import Movie from "/public/Movie.jpg";
 import NftDrap from "/public/Nft-Drap.jpg";
-import AiPrompt from "/public/AiPrompt.png"
+import AiPrompt from "/public/AiPrompt.png";
 import RealChat from "/public/RealChat.jpg";
 import Store from "/public/store.png";
 import ScatchBook from "/public/Scatch-book.png";
@@ -20,47 +19,39 @@ import { LuGraduationCap } from "react-icons/lu";
 import { SiEthereum } from "react-icons/si";
 export const links = [
   {
-    
     title: "Home",
     url: "#home",
-    hash:"home"
+    hash: "home",
   },
   {
-    
     title: "About",
     url: "#about",
-    hash:"about"
+    hash: "about",
   },
   {
     title: "Skills",
     url: "#skills",
-    hash:"skills"
-
+    hash: "skills",
   },
   {
     title: "Experience",
     url: "#experience",
-    hash:"experience"
-
+    hash: "experience",
   },
   {
-    
     title: "Projects",
     url: "#projects",
-    hash:"projects"
+    hash: "projects",
   },
   {
-    
     title: "Contact",
     url: "#contact",
-    hash:"contact"
+    hash: "contact",
   },
   {
-    
     title: "Blog",
     url: "/blog",
-    hash:"blog"
-    
+    hash: "blog",
   },
   // {
   //   id: 6,
@@ -93,16 +84,17 @@ export const links = [
   //     hash: "#contact",
   //   },
   // ] as const;
-] as const
+] as const;
 export const items = [
   {
     id: 11,
     title: "SpotMusic : music applicatoin",
     desc: "Built an application where user can sign up and app their own song and listen to the songs, have implemented the stripe payment for premium users",
-    image:sportmusic ,
+    image: sportmusic,
     link: "https://spot-music-pi.vercel.app/",
-    language: "Next.js ,Typescript, Tailwindcss, Zustand, expressJs ,NodeJs, Postgresql, supabase ,stripe payment",
-    github:"https://github.com/sammed-21/spotMusic"
+    language:
+      "Next.js ,Typescript, Tailwindcss, Zustand, expressJs ,NodeJs, Postgresql, supabase ,stripe payment",
+    github: "https://github.com/sammed-21/spotMusic",
   },
   {
     id: 10,
@@ -110,8 +102,9 @@ export const items = [
     desc: "Scatch-book is a application where Users can draw, save, and collaborate in real-time, fostering creative connections with friends",
     image: ScatchBook,
     link: "https://scatch-book.vercel.app/",
-    language: "Next.js ,Typescript, Tailwindcss, Redux-ToolKit , expressJs,NodeJs, Socket.io",
-    github:"https://github.com/sammed-21/scatch-book"
+    language:
+      "Next.js ,Typescript, Tailwindcss, Redux-ToolKit , expressJs,NodeJs, Socket.io",
+    github: "https://github.com/sammed-21/scatch-book",
   },
   {
     id: 1,
@@ -119,8 +112,9 @@ export const items = [
     desc: "E-commerce website where user can add items to cart and filter the items make checkout of the items",
     image: Store,
     link: "https://totalitycorp-frontend-challenge-navy-tau.vercel.app/",
-    language: "React ,Typescript, Tailwindcss, Recoil , Next-Auth , google OAuth",
-    github:"https://github.com/sammed-21/TotalityStore-ecommerce-website"
+    language:
+      "React ,Typescript, Tailwindcss, Recoil , Next-Auth , google OAuth",
+    github: "https://github.com/sammed-21/TotalityStore-ecommerce-website",
   },
   {
     id: 3,
@@ -128,8 +122,9 @@ export const items = [
     desc: "Built a Covid traker which show the number of covid case accoring to the city, state, country show data using the Map",
     image: CovidTraker,
     link: "https://account-management-woad.vercel.app/charts-maps",
-    language: "typescript , reactjs, chartjs, react-redux, tailwindcss, react-router-v6, react-query",
-    github:"https://github.com/sammed-21/contact-management"
+    language:
+      "typescript , reactjs, chartjs, react-redux, tailwindcss, react-router-v6, react-query",
+    github: "https://github.com/sammed-21/contact-management",
   },
   {
     id: 2,
@@ -138,7 +133,7 @@ export const items = [
     image: chart,
     link: "https://chart-dashboard-three.vercel.app/",
     language: "Next ,Js, Tailwindcss, Mongodb, Next-Auth , google OAuth",
-    github:"https://github.com/sammed-21/ChartDashboard"
+    github: "https://github.com/sammed-21/ChartDashboard",
   },
   {
     id: 4,
@@ -147,7 +142,7 @@ export const items = [
     image: AiPrompt,
     link: "https://ai-prompt-next-application.vercel.app/",
     language: "Next ,Js, Tailwindcss, Mongodb, Next-Auth , google OAuth",
-    github:"https://github.com/sammed-21/AiPrompt-nextApplication"
+    github: "https://github.com/sammed-21/AiPrompt-nextApplication",
   },
   {
     id: 5,
@@ -156,7 +151,7 @@ export const items = [
     image: blog,
     link: "https://blog-app-next-js-liard.vercel.app/",
     language: "TypeScript, NextJs, Tailwindcss, Mongodb, Next-Auth",
-    github:"https://github.com/sammed-21/blog-app-nextJs"
+    github: "https://github.com/sammed-21/blog-app-nextJs",
   },
   {
     id: 6,
@@ -165,7 +160,7 @@ export const items = [
     image: Search,
     link: "https://test-search-seven.vercel.app/",
     language: "TypeScript, ReactJs, SASS, FakerApi",
-    github:"https://github.com/sammed-21/test-search"
+    github: "https://github.com/sammed-21/test-search",
   },
   {
     id: 7,
@@ -174,9 +169,9 @@ export const items = [
     image: Movie,
     link: "https://movie-search-lyart.vercel.app/",
     language: "JavaScript, ReactJs, Css, React-Router-Dom, useReducer",
-    github:"https://github.com/sammed-21/movie-search"
+    github: "https://github.com/sammed-21/movie-search",
   },
-  
+
   {
     id: 8,
     title: "Nft Drop Application",
@@ -184,7 +179,7 @@ export const items = [
     image: NftDrap,
     link: "https://nft-drop-collection-sammed-21.vercel.app/",
     language: "TypeScript, NextJs, Tailwindcss, ThirdWeb,Polygon",
-    github:"https://github.com/sammed-21/Nft-Drop-Collection"
+    github: "https://github.com/sammed-21/Nft-Drop-Collection",
   },
   {
     id: 9,
@@ -193,8 +188,8 @@ export const items = [
     image: MuonCapital,
     link: "https://muon-capital-3prg.vercel.app/",
     language:
-    "JavaScript , Tailwindcss , ReactJs, Redux State Management, contextAPI",
-    github:"https://github.com/sammed-21/muon-capital"
+      "JavaScript , Tailwindcss , ReactJs, Redux State Management, contextAPI",
+    github: "https://github.com/sammed-21/muon-capital",
   },
   {
     id: 10,
@@ -203,18 +198,29 @@ export const items = [
     image: RealChat,
     link: "https://real-chat-blond.vercel.app/",
     language: "JavaScript, ReactJs , appwrite , react-router-dom, TailwindCss",
-    github:"https://github.com/sammed-21/Real-chat"
+    github: "https://github.com/sammed-21/Real-chat",
   },
 ] as const;
 
 export const experiencesData = [
+  {
+    title: "Frontend Web3 developer",
+    role: "zeru finance",
+    location: "Bangalore",
+    date: "Apr 2024 to present",
+    description:
+      "• Redesigned the entire application to enhance user experience and functionality, including integrating new features such as the leaderboard for the protocol. • Fixed critical bugs related to calling data from the blockchain, utilizing Ether.js and GraphQL to effectively retrieve and manage blockchain data. • mproved the application’s performance, raising the performance rating from 40 to 70. • Developed and managed a service using Express.js and MongoDB, where users earn points based on specific business logic.• Worked on the subgraph, adding support for new features and smart contracts, deploying them, and integrating them into the frontend.• Collaborated with the team to ensure the accuracy, functionality, and adherence to best practices in the application’s development.",
+    skill:
+      "Next.js,Typescript, Node.js, Tailwind CSS, and JavaScript ,solidty,Erc721, sub graph",
+    icon: React.createElement(PiStack),
+  },
   {
     title: "Full Stack Developer Intern",
     role: "Web3Scope",
     location: "Hydarabad",
     date: "Oct 2023 to present",
     description:
-    "Designed and implemented essential reuse-able components in Next.Js ,Typescript .Boosted engagement with creative solutions, showcasing robust problem-solving and teamwork in a startup setting",
+      "Designed and implemented essential reuse-able components in Next.Js ,Typescript .Boosted engagement with creative solutions, showcasing robust problem-solving and teamwork in a startup setting",
     skill:
       "Next.js,Typescript, Node.js, Express, React-Query(TanStack), Mongodb Tailwind CSS, and JavaScript ,REST API",
     icon: React.createElement(PiStack),
@@ -225,9 +231,8 @@ export const experiencesData = [
     location: "Girnar Sales, Remote (Freelance)",
     date: "Apr 2023 to May 2023",
     description:
-    "Developed a bespoke internal tool for Girnar Sales, encompassing essential components like login, customer management, and sales features. Designed user-friendly interfaces, integrated Rest-APIs for data efficiency, and leveraged Next.js, Tailwind CSS, and JavaScript for a modern, responsive web app.",
-    skill:
-      "Next.js, Tailwind CSS, and JavaScript ,REST API",
+      "Developed a bespoke internal tool for Girnar Sales, encompassing essential components like login, customer management, and sales features. Designed user-friendly interfaces, integrated Rest-APIs for data efficiency, and leveraged Next.js, Tailwind CSS, and JavaScript for a modern, responsive web app.",
+    skill: "Next.js, Tailwind CSS, and JavaScript ,REST API",
     icon: React.createElement(FaReact),
   },
   {
@@ -238,11 +243,10 @@ export const experiencesData = [
     description: [
       "Contributed to the development of the Stake sSPELL Bridge Smart Contract.",
       "Developed the smart contract using Solidity for staking sSPELL tokens on various blockchains.",
-      "Implemented a bridge mechanism for seamless token transfers between blockchains."
-     
+      "Implemented a bridge mechanism for seamless token transfers between blockchains.",
     ],
     skill:
-    "Solidity (smart contract), Bridges, Ethereum, Blockchain Technology, ReactJs",
+      "Solidity (smart contract), Bridges, Ethereum, Blockchain Technology, ReactJs",
     icon: React.createElement(SiEthereum),
   },
   {

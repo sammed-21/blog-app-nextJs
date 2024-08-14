@@ -27,28 +27,27 @@ export default function Intro() {
         className="relative scroll-mt-30  max-w-screen min-h-[70vh] flex justify-between items-center px-6 max-md:flex-col-reverse  max-sm:items-center  max-sm:mt-9 overflow-hidden scroll-mt-30"
       >
         <div className="flex-1  justify-cetner flex gap-[50px]  flex-col">
-          <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
-            <span className="animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black dark:bg-none dark:text-white bg-clip-text text-transparent">
-              {/* <span className=" animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text text-transparent"> */}
+          <h1 className="font-semibold text-transparent text-white border-none text-7xl max-md:text-5xl ">
+            <span className="text-transparent animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black dark:bg-none dark:text-white bg-clip-text">
+              {/* <span className="text-transparent animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text"> */}
               I&apos;m
               <br />
               Sammed S Betadur
             </span>
           </h1>
 
-          <p className="text-lgs">
-            Embarking from India, I fuse frontend artistry with backend
-            wizardry.
+          <p className="text-lg">
+            Embarking from India, I blend frontend creativity with the power of
+            Web3.
+            <br /> Crafting decentralized interfaces with HTML, CSS, JavaScript,
+            while empowering them using Solidity, Express, and Next.js.
             <br />
-            Crafting interfaces with HTML, CSS, JavaScript, and empowering them
-            using Express and Next.js.
-            <br />
-            Continuous learning fuels my innovation in this ever-evolving tech
-            realm.
+            Continuous learning drives my innovation in this dynamic,
+            blockchain-powered world
           </p>
 
           <motion.div
-            className="flex flex-col sm:flex-row justify-start gap-2 text-lg font-medium"
+            className="flex flex-col justify-start gap-2 text-lg font-medium sm:flex-row"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -57,18 +56,18 @@ export default function Intro() {
           >
             <Link
               href="https://github.com/sammed-21"
-              className="group bg-gray-900 text-white px-7 py-3 flex  gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+              className="flex gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
             >
               GitHub{" "}
             </Link>
 
             <a
-              className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-              href="sammed-resume.pdf"
-              download="sammed-7026716767-resume"
+              className="flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10"
+              href="Frontend_web3.pdf"
+              download="Frontend_web3"
             >
               Download CV{" "}
-              <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+              <HiDownload className="transition opacity-60 group-hover:translate-y-1" />
             </a>
 
             {/* <a
@@ -80,11 +79,11 @@ export default function Intro() {
         </a> */}
           </motion.div>
         </div>
-        <div className="relative flex-1 flex justify-end">
+        <div className="relative flex justify-end flex-1">
           <Image
             src={Hero}
             alt={"this is the main img"}
-            className="animate-bounce-slow  "
+            className="animate-bounce-slow "
             width={400}
             height={500}
           />
