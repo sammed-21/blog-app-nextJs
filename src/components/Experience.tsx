@@ -22,7 +22,6 @@ const Experience: React.FC = () => {
                 background: "#f3f4f6",
                 boxShadow: "none",
                 border: "1px solid rgba(0,0,0,0.05)",
-                // textAlign: "center",
                 padding: "1.3rem 2rem",
                 color: "black",
               }}
@@ -52,30 +51,3 @@ const Experience: React.FC = () => {
   );
 };
 export default Experience;
-
-// interface Experience {
-//     title: string;
-//     role: string;
-//     date: string;
-//     description: string[];
-//     skill:string
-//   }
-
-//   const ExperienceItem: React.FC<Experience> = ({ title, role, date, description ,skill}) => (
-//     <motion.div className="my-6" variants={experienceItemVariants}>
-//       <h2 className="text-xl font-bold">{title}</h2>
-//       <p className="text-sm">{role}</p>
-//       <p className="text-sm">{date}</p>
-//       <p className="list-disc ">
-//         {description.map((desc, index) => (
-//           <p key={index}>{desc}</p>
-//         ))}
-//       </p>
-//       <span className="font-semibold">Language and FrameWork: {skill}</span>
-//     </motion.div>
-//   );
-
-//   const experienceItemVariants = {
-//     hidden: { opacity: 0, y: 50 },
-//     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-//   };

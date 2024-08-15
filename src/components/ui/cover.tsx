@@ -3,7 +3,7 @@ import React, { useEffect, useId, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef } from "react";
 
-import { cn } from "@/src/utils/cn";
+import { cn } from "@/src/lib/cn";
 import { SparklesCore } from "@/src/components/ui/sparkel";
 
 export const Cover = ({

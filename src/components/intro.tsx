@@ -15,6 +15,7 @@ import { useActiveSectionContext } from "../context/active-section-context";
 import { useEffect } from "react";
 import { useSectionInView } from "../lib/hooks";
 import { Cover } from "./ui/cover";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
@@ -38,10 +39,10 @@ export default function Intro() {
           </h1>
 
           <p className="text-lg">
-            Embarking from India, I blend frontend creativity with the power of
-            Web3.
-            <br /> Crafting decentralized interfaces with HTML, CSS, JavaScript,
-            while empowering them using Solidity, Express, and Next.js.
+            I blend frontend creativity with the power of Web3.
+            <br /> Crafting decentralized interfaces with Typescript,
+            JavaScript,Next.js,Ether.js while empowering them using Solidity,
+            Express, and Smart Contract, Ethereum .
             <br />
             Continuous learning drives my innovation in this dynamic,
             blockchain-powered world
@@ -55,13 +56,16 @@ export default function Intro() {
               delay: 0.1,
             }}
           >
-            <Link
-              href="https://github.com/sammed-21"
-              className="flex gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
-            >
-              GitHub{" "}
+            <Link href="https://github.com/sammed-21">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                duration={0.4}
+                className="flex items-center space-x-2 text-black bg-white dark:bg-black dark:text-white"
+              >
+                Github
+              </HoverBorderGradient>
             </Link>
-
             <a
               className="flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10"
               href="Frontend_web3.pdf"
