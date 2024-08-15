@@ -48,11 +48,11 @@ export const links = [
     url: "#contact",
     hash: "contact",
   },
-  {
-    title: "Blog",
-    url: "/blog",
-    hash: "blog",
-  },
+  // {
+  //   title: "Blog",
+  //   url: "/blog",
+  //   hash: "blog",
+  // },
   // {
   //   id: 6,
   //   title: "Dashboard",
@@ -87,16 +87,6 @@ export const links = [
 ] as const;
 export const items = [
   {
-    id: 11,
-    title: "SpotMusic : music applicatoin",
-    desc: "Built an application where user can sign up and app their own song and listen to the songs, have implemented the stripe payment for premium users",
-    image: sportmusic,
-    link: "https://spot-music-pi.vercel.app/",
-    language:
-      "Next.js ,Typescript, Tailwindcss, Zustand, expressJs ,NodeJs, Postgresql, supabase ,stripe payment",
-    github: "https://github.com/sammed-21/spotMusic",
-  },
-  {
     id: 10,
     title: "Scatch-Book Application ",
     desc: "Scatch-book is a application where Users can draw, save, and collaborate in real-time, fostering creative connections with friends",
@@ -105,6 +95,16 @@ export const items = [
     language:
       "Next.js ,Typescript, Tailwindcss, Redux-ToolKit , expressJs,NodeJs, Socket.io",
     github: "https://github.com/sammed-21/scatch-book",
+  },
+  {
+    id: 11,
+    title: "SpotMusic : music applicatoin",
+    desc: "Built an application where user can sign up and app their own song and listen to the songs, have implemented the stripe payment for premium users",
+    image: sportmusic,
+    link: "https://spot-music-pi.vercel.app/",
+    language:
+      "Next.js ,Typescript, Tailwindcss, Zustand, expressJs ,NodeJs, Postgresql, supabase ,stripe payment",
+    github: "https://github.com/sammed-21/spotMusic",
   },
   {
     id: 1,
@@ -126,15 +126,7 @@ export const items = [
       "typescript , reactjs, chartjs, react-redux, tailwindcss, react-router-v6, react-query",
     github: "https://github.com/sammed-21/contact-management",
   },
-  {
-    id: 2,
-    title: "Chart Dashboard Application | NextJs",
-    desc: "This is Chart and user dashboard with chat.js and Next js which show data and show it in the form of chart",
-    image: chart,
-    link: "https://chart-dashboard-three.vercel.app/",
-    language: "Next ,Js, Tailwindcss, Mongodb, Next-Auth , google OAuth",
-    github: "https://github.com/sammed-21/ChartDashboard",
-  },
+
   {
     id: 4,
     title: "Ai Prompt Application | NextJs",
@@ -144,24 +136,7 @@ export const items = [
     language: "Next ,Js, Tailwindcss, Mongodb, Next-Auth , google OAuth",
     github: "https://github.com/sammed-21/AiPrompt-nextApplication",
   },
-  {
-    id: 5,
-    title: "Blog Application",
-    desc: "This application allows users to create, publish, and read blog. Anyone can access and read these blogs.. To enhance the functionality, I have also integrated Nodemailer for email communication within the application",
-    image: blog,
-    link: "https://blog-app-next-js-liard.vercel.app/",
-    language: "TypeScript, NextJs, Tailwindcss, Mongodb, Next-Auth",
-    github: "https://github.com/sammed-21/blog-app-nextJs",
-  },
-  {
-    id: 6,
-    title: "SearchBoard",
-    desc: "evelop a search and filter application Using Next.js,SCSS,TypeScript, I’ve built a Search and Filter Application ,  I developed a feature for filtering by price, review, and brand and created a responsive website using SCSS",
-    image: Search,
-    link: "https://test-search-seven.vercel.app/",
-    language: "TypeScript, ReactJs, SASS, FakerApi",
-    github: "https://github.com/sammed-21/test-search",
-  },
+
   {
     id: 7,
     title: "Movie-Search",
@@ -170,35 +145,6 @@ export const items = [
     link: "https://movie-search-lyart.vercel.app/",
     language: "JavaScript, ReactJs, Css, React-Router-Dom, useReducer",
     github: "https://github.com/sammed-21/movie-search",
-  },
-
-  {
-    id: 8,
-    title: "Nft Drop Application",
-    desc: " The Nft-Drop Collections Application . In this application where user can claim nft with 0.01 Ethers and get a air drop to there address",
-    image: NftDrap,
-    link: "https://nft-drop-collection-sammed-21.vercel.app/",
-    language: "TypeScript, NextJs, Tailwindcss, ThirdWeb,Polygon",
-    github: "https://github.com/sammed-21/Nft-Drop-Collection",
-  },
-  {
-    id: 9,
-    title: "Trellos",
-    desc: "TaskFlow: Streamlined Task Management with Modern Design. Organize, prioritize, and collaborate effectively by creating, tracking, and listing todos in this user-friendly Trello-inspired application.",
-    image: MuonCapital,
-    link: "https://muon-capital-3prg.vercel.app/",
-    language:
-      "JavaScript , Tailwindcss , ReactJs, Redux State Management, contextAPI",
-    github: "https://github.com/sammed-21/muon-capital",
-  },
-  {
-    id: 10,
-    title: "Real Chat Application using AppWrite ",
-    desc: "This application leverages React, Appwrite, and Tailwind CSS to empower users to seamlessly create accounts, login, and engage in real-time peer-to-peer chat, offering a dynamic and modern communication experience.",
-    image: RealChat,
-    link: "https://real-chat-blond.vercel.app/",
-    language: "JavaScript, ReactJs , appwrite , react-router-dom, TailwindCss",
-    github: "https://github.com/sammed-21/Real-chat",
   },
 ] as const;
 
@@ -260,7 +206,12 @@ export const experiencesData = [
 ];
 
 export const skillsData = [
-  "HTML",
+  "Solidty",
+  "Ether.js",
+  "web3.js",
+  "redux",
+  "optimization",
+  "Defi",
   "CSS",
   "JavaScript",
   "TypeScript",
@@ -272,7 +223,7 @@ export const skillsData = [
   // "Prisma",
   "MongoDB",
   "Redux",
-  // "GraphQL",
+  "GraphQL",
   // "Apollo",
   "Express",
   "PostgreSQL",

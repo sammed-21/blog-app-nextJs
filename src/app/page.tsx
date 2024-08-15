@@ -11,7 +11,7 @@ import SectionDivider from "../components/section-divider";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4 scroll-mt-30">
+    <main className="flex flex-col max-w-[1320px] w-full mx-auto items-center px-4 scroll-mt-30">
       <Intro />
       <SectionDivider />
       <AboutPage />
@@ -29,9 +29,9 @@ export default function Home() {
       <div className="relative  max-w-screen min-h-[70vh] flex justify-center items-center px-6 max-md:flex-col-reverse  max-sm:items-center  max-sm:mt-9 overflow-hidden">
         <div className="flex-1  justify-cetner flex gap-[50px]  flex-col">
         
-          <h1 className="text-7xl font-semibold text-transparent text-white  border-none max-md:text-5xl ">
+          <h1 className="font-semibold text-transparent text-white border-none text-7xl max-md:text-5xl ">
         
-          <span className="animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black dark:bg-none dark:text-white bg-clip-text text-transparent">
+          <span className="text-transparent animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black dark:bg-none dark:text-white bg-clip-text">
                  I&apos;m
                 <br/>
             Sammed S Betadur
@@ -48,7 +48,7 @@ export default function Home() {
             </p>
          
              <motion.div
-        className="flex flex-col sm:flex-row justify-start gap-2 text-lg font-medium"
+        className="flex flex-col justify-start gap-2 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -57,7 +57,7 @@ export default function Home() {
       >
         <Link
           href="/contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex  gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="flex gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
      
         >
           Contact me {" "}
@@ -65,12 +65,12 @@ export default function Home() {
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10"
           href="/Resume_Sammed.pdf"
           download
         >
           Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          <HiDownload className="transition opacity-60 group-hover:translate-y-1" />
         </a> */}
 
       {/* <a
@@ -82,11 +82,11 @@ export default function Home() {
         </a> */}
       {/* </motion.div>
         </div>
-          <div   className="relative flex-1 flex justify-center">
+          <div   className="relative flex justify-center flex-1">
           <Image
             src={Hero}
             alt={"this is the main img"}
-            className="animate-bounce-slow  "
+            className="animate-bounce-slow "
             width={400}
             height={500}
             />

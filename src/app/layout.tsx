@@ -22,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark !scroll-smooth ">
       <body
-        className={`${inter.className}bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}
+        suppressHydrationWarning={true}
+        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}
       >
         {/* <ThemeProvider> */}
 

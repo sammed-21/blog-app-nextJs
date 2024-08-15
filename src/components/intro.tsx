@@ -14,6 +14,7 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "../context/active-section-context";
 import { useEffect } from "react";
 import { useSectionInView } from "../lib/hooks";
+import { Cover } from "./ui/cover";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
@@ -32,7 +33,7 @@ export default function Intro() {
               {/* <span className="text-transparent animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text"> */}
               I&apos;m
               <br />
-              Sammed S Betadur
+              Sammed S Betadur <Cover>Web3 Developer</Cover>
             </span>
           </h1>
 

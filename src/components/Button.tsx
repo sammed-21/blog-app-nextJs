@@ -1,6 +1,5 @@
-
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 interface ButtonProps {
   text: string;
@@ -9,8 +8,8 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ text, url, classname }) => {
-  if (!url) { 
-    return <button className='button'>{text}</button>;
+  if (!url) {
+    return <button className="button">{text}</button>;
   }
 
   return (
@@ -18,13 +17,6 @@ const Button: React.FC<ButtonProps> = ({ text, url, classname }) => {
       <button className={`button ${classname} hover:bg-sky-500`}>{text}</button>
     </Link>
   );
-}
+};
 
 export default Button;
- 
-
-
-
-
-
-
