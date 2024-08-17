@@ -127,25 +127,25 @@ export const items = [
     github: "https://github.com/sammed-21/contact-management",
   },
 
-  {
-    id: 4,
-    title: "Ai Prompt Application | NextJs",
-    desc: "By using debouncing and Google OAuth for user authentication, users may publish and filter out their own content.",
-    image: AiPrompt,
-    link: "https://ai-prompt-next-application.vercel.app/",
-    language: "Next ,Js, Tailwindcss, Mongodb, Next-Auth , google OAuth",
-    github: "https://github.com/sammed-21/AiPrompt-nextApplication",
-  },
+  // {
+  //   id: 4,
+  //   title: "Ai Prompt Application | NextJs",
+  //   desc: "By using debouncing and Google OAuth for user authentication, users may publish and filter out their own content.",
+  //   image: AiPrompt,
+  //   link: "https://ai-prompt-next-application.vercel.app/",
+  //   language: "Next ,Js, Tailwindcss, Mongodb, Next-Auth , google OAuth",
+  //   github: "https://github.com/sammed-21/AiPrompt-nextApplication",
+  // },
 
-  {
-    id: 7,
-    title: "Movie-Search",
-    desc: " The Watchlist Application is built using JavaScript, React.js, React Redux, Context API, and CSS. Users can search, add movies to their watchlist, and manage their collections. Movies are fetched from an TMDB API and dynamically displayed on the page, ensuring an up-to-date movie collection",
-    image: Movie,
-    link: "https://movie-search-lyart.vercel.app/",
-    language: "JavaScript, ReactJs, Css, React-Router-Dom, useReducer",
-    github: "https://github.com/sammed-21/movie-search",
-  },
+  // {
+  //   id: 7,
+  //   title: "Movie-Search",
+  //   desc: " The Watchlist Application is built using JavaScript, React.js, React Redux, Context API, and CSS. Users can search, add movies to their watchlist, and manage their collections. Movies are fetched from an TMDB API and dynamically displayed on the page, ensuring an up-to-date movie collection",
+  //   image: Movie,
+  //   link: "https://movie-search-lyart.vercel.app/",
+  //   language: "JavaScript, ReactJs, Css, React-Router-Dom, useReducer",
+  //   github: "https://github.com/sammed-21/movie-search",
+  // },
 ] as const;
 
 export const experiencesData = [

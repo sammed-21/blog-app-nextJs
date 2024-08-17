@@ -12,10 +12,10 @@ const Projects = () => {
   return (
     <motion.section ref={ref} id="projects">
       <SectionHeading>Projects</SectionHeading>
-      <div className="grid flex-col items-center grid-cols-2 gap-3 my-4 overflow-x-auto justify-evenly">
+      <div className="grid flex-col items-center grid-cols-1 gap-3 my-4 overflow-x-auto md:grid-cols-2 justify-evenly">
         {items.map((project, index) => {
           return (
-            <div key={index} className="cols-span-2 ">
+            <div key={index} className="cols-span-1 md:cols-span-2 ">
               <Project key={project.id} {...project} />
             </div>
           );
