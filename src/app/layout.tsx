@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import AuthProvider from "../components/AuthProvider";
 import ActiveSectionContextProvider from "../context/active-section-context";
 import { motion } from "framer-motion";
+import { Spotlight } from "../components/Spotlight";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sammed Dev",
@@ -23,8 +24,9 @@ export default function RootLayout({
     <html lang="en" className="dark !scroll-smooth ">
       <body
         suppressHydrationWarning={true}
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.className}  bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}
       >
+        <Spotlight className="absolute top-0 left-0" fill="white" />
         {/* <ThemeProvider> */}
 
         <AuthProvider>

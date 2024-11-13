@@ -5,9 +5,10 @@ import { CardBody, CardContainer, CardItem } from "@/src/components/ui/3d-card";
 import SectionHeading from "./section-heading";
 import { items } from "../lib/data";
 import { useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Lens } from "./lens";
 
 type ProjectProps = (typeof items)[number];
 
@@ -26,6 +27,7 @@ export default function Project({
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const [hovering, setHovering] = useState(false);
 
   return (
     <div>
@@ -50,13 +52,15 @@ export default function Project({
               {desc}
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4">
-              <Image
-                src={image}
-                height="1000"
-                width="1000"
-                className="object-cover w-full h-60 rounded-xl group-hover/card:shadow-xl"
-                alt={title}
-              />
+              <Lens hovering={hovering} setHovering={setHovering}>
+                <Image
+                  src={image}
+                  height="1000"
+                  width="1000"
+                  className="object-cover w-full h-60 rounded-xl group-hover/card:shadow-xl"
+                  alt={title}
+                />
+              </Lens>
             </CardItem>
             <div className="flex flex-wrap gap-2 mt-4">
               {language.split(",").map((lang, id) => (

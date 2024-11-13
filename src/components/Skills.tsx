@@ -6,6 +6,7 @@ import { skillsData } from "../lib/data";
 // import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { useSectionInView } from "../lib/hooks";
+import { GridBackgroundDemo } from "./GradientBackground";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -30,24 +31,26 @@ export default function Skills() {
       ref={ref}
       className=" max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <h1 className="text-center text-3xl font-bold py-4">My skills</h1>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
-        ))}
-      </ul>
+      <GridBackgroundDemo className={"flex flex-col gap-4"}>
+        <h1 className="py-4 text-3xl font-bold text-center">My skills</h1>
+        <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+          {skillsData.map((skill, index) => (
+            <motion.li
+              className="px-5 py-3 bg-white borderBlack rounded-xl dark:bg-white/10 dark:text-white/80"
+              key={index}
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
+            >
+              {skill}
+            </motion.li>
+          ))}
+        </ul>
+      </GridBackgroundDemo>
     </motion.section>
   );
 }

@@ -16,11 +16,12 @@ import { useEffect } from "react";
 import { useSectionInView } from "../lib/hooks";
 import { Cover } from "./ui/cover";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import { Spotlight } from "./Spotlight";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
   return (
-    <>
+    <div>
       {/* <PageWrapper> */}
 
       <motion.div
@@ -34,7 +35,7 @@ export default function Intro() {
               {/* <span className="text-transparent animate-pulse bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text"> */}
               I&apos;m
               <br />
-              Sammed S Betadur <Cover>Web3 Developer</Cover>
+              Sammed S Betadur
             </span>
           </h1>
 
@@ -96,6 +97,6 @@ export default function Intro() {
       </motion.div>
 
       {/* </PageWrapper> */}
-    </>
+    </div>
   );
 }

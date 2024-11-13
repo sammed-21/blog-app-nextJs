@@ -7,6 +7,7 @@ import Movie from "/public/Movie.jpg";
 import NftDrap from "/public/Nft-Drap.jpg";
 import AiPrompt from "/public/AiPrompt.png";
 import RealChat from "/public/RealChat.jpg";
+import stakex from "/public/stakex.png";
 import Store from "/public/store.png";
 import ScatchBook from "/public/Scatch-book.png";
 import sportmusic from "/public/spotmusic.png";
@@ -86,6 +87,16 @@ export const links = [
   // ] as const;
 ] as const;
 export const items = [
+  {
+    id: 20,
+    title: "StakeX Dapp",
+    desc: "Developed StakeX, a decentralized application (dApp) where users can stake tokens and earn rewards in return.• Built an intuitive and user-friendly interface, providing clear visuals to help users easily navigate and understandthe staking process.",
+    image: stakex,
+    link: "https://stake-x-jet.vercel.app/staking",
+    language:
+      "Next.js,ether.js,Smart Contract, Ethereum , Solidity,Zustand ,Typescript, Tailwindcss, NodeJs",
+    github: "https://github.com/sammed-21/stakeX",
+  },
   {
     id: 10,
     title: "Scatch-Book Application ",
