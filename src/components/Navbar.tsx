@@ -23,12 +23,7 @@ const Navbar = () => {
 
   // const [activeSection, setActiveSection] =useState("home")
   return (
-    <nav className="flex px-5  max-w-[80%] max-md:w-full md:min-w-[40%] left-1/2 h-18 -translate-x-1/2 py-3  items-center justify-between  fixed top-4 rounded-full z-10 backdrop-filter bg-gray-800 backdrop-blur-xl  bg-opacity-50    ">
-      <Link href="/">
-        <h2 className="p-2 font-mono tracking-widest transition bg-white outline-none cursor-pointer font-bold-xl group focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10">
-          SAMMED
-        </h2>
-      </Link>
+    <nav className="flex px-5  max-w-[80%] max-md:w-full md:min-w-[40%] left-1/2 h-18 -translate-x-1/2 py-3  items-center justify-between  fixed top-4 rounded-full z-10 backdrop-filter  backdrop-blur-xl  bg-opacity-50    ">
       <div className="flex items-center gap-2">
         {/* <DarkModeToggle /> */}
         {/* <ThemeSwitch /> */}
