@@ -6,6 +6,7 @@ import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 
 import SectionDivider from "../components/section-divider";
+import { FloatingIcons } from "../components/FloatingComponent";
 // import Experience from "../components/experience";
 //  import Skills from "../components/skills"
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Experience />
       <SectionDivider />
       <Projects />
+      <FloatingIcons />
       {/* <SectionDivider/> */}
 
       <ContactPage />
