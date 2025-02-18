@@ -30,11 +30,41 @@ module.exports = {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "float-medium": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        "float-fast": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "float-slower": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-25px)" },
+        },
       },
       animation: {
         "bounce-slow": "bounce-slow 3s linear infinite",
         "hover-slow": "bounce-slow 1s linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "float-slow": "float-slow 6s infinite ease-in-out",
+        "float-medium": "float-medium 5s infinite ease-in-out",
+        "float-fast": "float-fast 4s infinite ease-in-out",
+        "float-slower": "float-slower 7s infinite ease-in-out",
       },
 
       backgroundImage: {

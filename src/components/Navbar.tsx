@@ -23,7 +23,7 @@ const Navbar = () => {
 
   // const [activeSection, setActiveSection] =useState("home")
   return (
-    <nav className="flex px-5  max-w-[80%] max-md:w-full md:min-w-[40%] left-1/2 h-18 -translate-x-1/2 py-3  items-center justify-between  fixed top-4 rounded-full z-10 backdrop-filter  backdrop-blur-xl  bg-opacity-50    ">
+    <nav className="fixed z-10 border-[0.5px]  border-white flex items-center justify-between px-5 py-3 -translate-x-1/2 bg-opacity-50 rounded-full max-w-fit max-md:w-full md:min-w-fit left-1/2 h-18 top-4 backdrop-filter backdrop-blur-xl ">
       <div className="flex items-center gap-2">
         {/* <DarkModeToggle /> */}
         {/* <ThemeSwitch /> */}
