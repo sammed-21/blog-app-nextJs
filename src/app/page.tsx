@@ -22,7 +22,7 @@ export default function Home() {
       <Experience />
       <SectionDivider />
       <Projects />
-      <FloatingIcons />
+      {/* <FloatingIcons /> */}
       {/* <SectionDivider/> */}
 
       <ContactPage />
